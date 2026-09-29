@@ -1,0 +1,32 @@
+item,value,unit,source
+q1_fuel_hit,0.175,usd_bn,"Walmart Q1 FY27 call (21 May 2026), CFO: 'We absorbed approximately $175 million or about 250 basis points of operating income growth from higher-than-planned fuel costs in our global distribution and fulfillment operations.'"
+fy_fuel_increment,2.0,usd_bn,"Walmart Q2 FY27 call (20 Aug 2026): 'more than $2 billion of incremental fuel-related costs this year, above and beyond our original guidance assumptions'; guidance assumes fuel persists at current rates"
+sams_fuel_oi_q1_fy27,159,usd_m,"Q1 FY27 presentation: Sam's OI $674M incl. fuel, $515M without fuel"
+sams_fuel_oi_q1_fy26,137,usd_m,"derived from the same slide's growth rates: $674M +1.2%, $515M -2.6%"
+sams_fuel_oi_q2_fy27,193,usd_m,"Q2 FY27 presentation: $678M incl. fuel, $485M without"
+sams_fuel_oi_q2_fy26,156,usd_m,"same slide: prior year $470M and $314M"
+sams_fuel_oi_fy26,620,usd_m,"FY26 10-K: Sam's OI $2,442M incl. fuel, $1,822M excl. fuel"
+ulsd_fut_oct26,4.7553,usd_gal,"CME NY Harbor ULSD settlement 28 Sep 2026"
+ulsd_fut_nov26,4.4953,usd_gal,same
+ulsd_fut_dec26,4.3681,usd_gal,same
+ulsd_fut_jan27,4.2892,usd_gal,same
+ulsd_fut_feb27,4.1895,usd_gal,same
+ulsd_fut_mar27,4.0627,usd_gal,same
+ulsd_fut_apr27,3.9237,usd_gal,same
+ulsd_fut_may27,3.7929,usd_gal,same
+ulsd_fut_jun27,3.6720,usd_gal,same
+ulsd_fut_jul27,3.5975,usd_gal,same
+ulsd_fut_aug27,3.5430,usd_gal,same
+ulsd_fut_sep27,3.5035,usd_gal,same
+ulsd_fut_oct27,3.4654,usd_gal,same
+ulsd_fut_nov27,3.4083,usd_gal,same
+ulsd_fut_dec27,3.3276,usd_gal,same
+ulsd_fut_jan28,3.2397,usd_gal,same
+retail_spot_spread_median_2024_2025,1.34,usd_gal,"median monthly retail diesel (FRED GASDESW) minus NY Harbor ULSD spot (FRED DDFUELNYH), Jan 2024-Dec 2025"
+op_cash_flow_fy26,41.565,usd_bn,"Walmart presentation, FY26"
+op_cash_flow_h1_fy26,18.352,usd_bn,"H1 FY26"
+op_cash_flow_h1_fy27,19.710,usd_bn,"H1 FY27"
+da_ttm,15.094,usd_bn,"Walmart ROI table, D&A trailing 12 months to 31 Jul 2026"
+dividend_annual,0.99,usd,"Nasdaq annualized dividend"
+low_52w,98.88,usd,"Nasdaq 52-week low"
+high_52w,135.155,usd,"Nasdaq 52-week high"

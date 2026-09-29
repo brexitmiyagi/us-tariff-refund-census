@@ -1,0 +1,40 @@
+company,ticker,amount_musd,measure,treatment,filing,filed,url
+Ford Motor,F,1300,"benefit recognized Q1 2026 (govt and supplier reimbursements); ~$500m IEEPA cash expected H2 2026",kept,10-Q Q2 2026,2026-07,https://www.sec.gov/Archives/edgar/data/37996/000003799626000156/f-20260630.htm
+Target,TGT,994,"recognized, refunds received Q2",kept_cogs,10-Q quarter to 1 Aug 2026,2026-08-28,https://www.sec.gov/Archives/edgar/data/27419/000002741926000042/tgt-20260801.htm
+Nike,NKE,986,"COGS benefit; $302m received, $684m receivable",kept_cogs,10-K FY to 31 May 2026,2026-07-15,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000320187&type=10-K
+FedEx,FDX,749,"customer refund obligations recorded in current liabilities",passed_to_customers,10-K FY to 31 May 2026,2026-07-20,https://www.sec.gov/Archives/edgar/data/1048911/000104891126000105/fdx-20260531.htm
+Gap,GAP,512,"claims submitted; COGS reduction; ~$95m to vendors; net $417m",kept_cogs,10-Q quarter to 1 Aug 2026,2026-08-28,https://www.sec.gov/Archives/edgar/data/39911/000162828026059345/gap-20260801.htm
+Medline,MDLN,507,"expected total; $332m COGS; $89m accrued customer repayments; $14m interest",mixed,10-Q quarter to 27 Jun 2026,2026-08-05,https://www.sec.gov/Archives/edgar/data/2046386/000204638626000051/mdln-20260627.htm
+General Motors,GM,500,"net favorable adjustment Q1 2026",kept,10-Q Q2 2026,2026-07-21,https://www.sec.gov/Archives/edgar/data/1467858/000146785826000051/gm-20260630.htm
+UPS,UPS,500,"approved refunds held in other current liabilities, payable to customers",passed_to_customers,10-Q Q2 2026,2026-08-05,https://www.sec.gov/Archives/edgar/data/1090727/000162828026053249/ups-20260630.htm
+Dollar Tree,DLTR,369,"refunds received Q2 plus $14m interest",kept,10-Q quarter to 1 Aug 2026,2026-08-27,https://www.sec.gov/Archives/edgar/data/935703/000093570326000109/dltr-20260801.htm
+TJX,TJX,331,"received Q2; recognized in cost of sales",kept_cogs,10-Q quarter to 1 Aug 2026,2026-08-28,https://www.sec.gov/Archives/edgar/data/109198/000010919826000048/tjx-20260801.htm
+Cardinal Health,CAH,200,"receivable; expects to return to customers the portion reflecting higher prices paid",mixed,10-K FY to 30 Jun 2026,2026-08-11,https://www.sec.gov/Archives/edgar/data/721371/000072137126000038/cah-20260630.htm
+Williams-Sonoma,WSM,197.8,"filed; $200.2m collected incl. interest",kept,10-Q quarter to 2 Aug 2026,2026-08-28,https://www.sec.gov/Archives/edgar/data/719955/000071995526000208/wsm-20260802.htm
+American Eagle,AEO,195.7,"received incl. interest; separately sold $68.9m of claims for $18.6m",kept_and_sold,10-Q quarter to 1 Aug 2026,2026-09-10,https://www.sec.gov/Archives/edgar/data/919012/000119312526387856/aeo-20260801.htm
+Kohl's,KSS,185,"claims submitted; gain contingency model",gain_contingency,10-Q quarter to 1 Aug 2026,2026-09-03,https://www.sec.gov/Archives/edgar/data/885639/000119312526381893/kss-20260801.htm
+Five Below,FIVE,169.5,"$163.6m COGS + $5.9m interest",kept_cogs,10-Q quarter to 1 Aug 2026,2026-09-03,https://www.sec.gov/Archives/edgar/data/1177609/000117760926000027/five-20260801.htm
+VF Corp,VFC,149.7,"receivable at Mar 2026",kept,10-Q quarter to 27 Jun 2026,2026-07-29,https://www.sec.gov/Archives/edgar/data/103379/000010337926000114/vfc-20260627.htm
+G-III Apparel,GIII,139.5,"receivable; $129.7m received + $4.2m interest",kept,10-Q,2026-09-08,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000821002&type=10-Q
+lululemon,LULU,134.5,"in gross profit; 560bp of gross margin",kept_cogs,10-Q quarter to 2 Aug 2026,2026-09-03,https://www.sec.gov/Archives/edgar/data/1397187/000139718726000127/lulu-20260802.htm
+GE HealthCare,GEHC,129,"$106m (2025 tariffs) + $23m pre-tax benefits",kept,10-Q Q2 2026,2026-07-29,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001932393&type=10-Q
+Fortune Brands,FBIN,122.1,"probable and estimable receivable; $104.2m COGS, $17.9m inventory",kept_cogs,10-Q quarter to 27 Jun 2026,2026-08-05,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001519751&type=10-Q
+Stanley Black & Decker,SWK,118,"pre-tax gain in cost of sales, Phase 1",kept_cogs,10-Q quarter to 4 Jul 2026,2026-07-29,https://www.sec.gov/Archives/edgar/data/93556/000009355626000031/swk-20260704.htm
+Tapestry,TPR,114.7,"probable refund; $96.2m COGS",kept_cogs,10-K FY to 27 Jun 2026,2026-08-13,https://www.sec.gov/Archives/edgar/data/1116132/000111613226000018/tpr-20260627.htm
+Abercrombie & Fitch,ANF,100,"recognized plus $3m interest",kept,10-Q quarter to 1 Aug 2026,2026-09-04,https://www.sec.gov/Archives/edgar/data/1018840/000101884026000047/anf-20260801.htm
+Newell Brands,NWL,100,"pretax benefit Q2 for 2025 tariffs (plus $38m for 2026)",kept,10-Q Q2 2026,2026-07-31,https://www.sec.gov/Archives/edgar/data/814453/000081445326000029/nwl-20260630.htm
+Dorman Products,DORM,98.1,"refunds recorded Q2",kept,10-Q,2026-08-04,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000868780&type=10-Q
+Urban Outfitters,URBN,95.7,"one-time gross profit benefit",kept_cogs,10-Q quarter to 31 Jul 2026,2026-09-09,https://www.sec.gov/Archives/edgar/data/912615/000119312526386468/urbn-20260731.htm
+Masco,MAS,95,"net tariff benefit Q2",kept,10-Q Q2 2026,2026-07-29,https://www.sec.gov/Archives/edgar/data/62996/000006299626000027/mas-20260630.htm
+Bath & Body Works,BBWI,85,"refunds and related interest",kept,10-Q,2026-08-26,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000701985&type=10-Q
+Lear,LEA,85,"IEEPA tariffs paid 2025, nearly all already recovered from customers, now subject to refund",already_recovered_from_customers,10-Q Q2 2026,2026-07-31,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000842162&type=10-Q
+Academy Sports,ASO,83.7,"received, COGS reduction; also remitted claims under a liability",kept_and_sold,10-Q,2026-09-09,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001817358&type=10-Q
+Polaris,PII,83,"receivable",kept,10-Q Q2 2026,2026-07-28,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000931015&type=10-Q
+Lowe's,LOW,80,"recognized in earnings Q2",kept,10-Q,2026-08-27,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000060667&type=10-Q
+Columbia Sportswear,COLM,78,"received incl. interest",kept,10-Q,2026-08-06,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001050797&type=10-Q
+Baxter,BAX,75,"to cost of goods sold",kept_cogs,10-Q Q2 2026,2026-07-30,https://www.sec.gov/Archives/edgar/data/10456/000162828026051118/bax-20260630.htm
+Zebra Technologies,ZBRA,73,"pretax benefit; $14m cash received",kept,10-Q,2026-08-04,https://www.sec.gov/Archives/edgar/data/877212/000162828026052550/zbra-20260704.htm
+Generac,GNRC,71,"reduced cost of goods sold",kept_cogs,10-Q,2026-08-04,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001474735&type=10-Q
+Mettler-Toledo,MTD,52.4,"one-time benefit; separately committed $27.8m to customers",mixed,10-Q Q2 2026,2026-07-31,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001037646&type=10-Q
+UFP Industries,UFPI,23,"if collected, ~$11m must be refunded to customers",mixed,10-Q,2026-08-05,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000912767&type=10-Q
+Power Solutions Intl,PSIX,22.7,"received; full amount held as customer refund liability",passed_to_customers,10-Q,2026-08-06,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001137091&type=10-Q

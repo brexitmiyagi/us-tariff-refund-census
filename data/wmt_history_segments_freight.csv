@@ -1,0 +1,70 @@
+item,value,unit,source
+nyh_2022_02,2.8718,usd_gal,"FRED DDFUELNYH monthly average of daily, NY Harbor ULSD spot"
+nyh_2022_03,3.7798,usd_gal,same
+nyh_2022_04,4.0423,usd_gal,same
+nyh_2026_02,2.5012,usd_gal,same
+nyh_2026_03,3.9548,usd_gal,same
+nyh_2026_04,3.9885,usd_gal,same
+nyh_2026_05,3.9690,usd_gal,same
+nyh_2026_06,3.4010,usd_gal,same
+nyh_2026_07,3.9131,usd_gal,same
+nyh_2026_08,4.2530,usd_gal,same
+nyh_2026_09,4.9561,usd_gal,"same, September to 22 Sep"
+q1_fy23_fuel_over_plan,0.160,usd_bn,"Walmart Q1 FY23 call (17 May 2022), CFO: 'Fuel ran over $160 million higher for the quarter in the US than we forecasted.'"
+q1_fy27_fuel_over_plan,0.175,usd_bn,"Walmart Q1 FY27 call (21 May 2026)"
+fy27_fuel_over_plan,2.0,usd_bn,"Walmart Q2 FY27 call (20 Aug 2026): more than $2 billion"
+shares_q2_fy27,7.978,bn,"10-Q Q2 FY27 diluted weighted average"
+shares_q2_fy26,8.016,bn,"10-Q Q2 FY27, prior-year column"
+adj_oi_growth_fy21,0.093,share,"Walmart Q4 FY21 release, adjusted OI (cc)"
+adj_oi_growth_fy22,0.112,share,"Q4 FY22 release"
+adj_oi_growth_fy23,-0.052,share,"Q4 FY23 release"
+adj_oi_growth_fy24,0.102,share,"Q4 FY24 release (adjusted)"
+adj_oi_growth_fy25,0.097,share,"Q4 FY25 release (adjusted, cc)"
+adj_oi_growth_fy26,0.054,share,"Q4 FY26 release (adjusted, cc)"
+guide_px_fy23,46.2933,usd,"Nasdaq split-adjusted close 17 Feb 2022"
+guide_eps_fy23,2.2718,usd,"FY22 adj EPS $6.46 x 1.055 (guide 5-6% ex divestitures) / 3 for 2024 split"
+guide_px_fy24,49.11,usd,"close 21 Feb 2023"
+guide_eps_fy24,1.9917,usd,"$5.90-6.05 midpoint / 3"
+guide_px_fy25,58.62,usd,"close 20 Feb 2024"
+guide_eps_fy25,2.30,usd,"$2.23-2.37 post-split midpoint"
+guide_px_fy26,97.21,usd,"close 20 Feb 2025"
+guide_eps_fy26,2.55,usd,"$2.50-2.60 midpoint"
+guide_px_fy27,124.87,usd,"close 19 Feb 2026"
+guide_eps_fy27,2.80,usd,"$2.75-2.85 midpoint"
+fy26_sales_us,483.0,usd_bn,"Q4 FY26 release"
+fy26_sales_intl,130.4,usd_bn,same
+fy26_sales_sams,93.0,usd_bn,same
+fy26_adjoi_us,25.2,usd_bn,same
+fy26_adjoi_intl_cc,5.9,usd_bn,same
+fy26_adjoi_sams,2.522,usd_bn,same
+h1_oi_us_fy27,14.017,usd_bn,"10-Q Q2 FY27 segment note"
+h1_oi_us_fy26,12.428,usd_bn,same
+h1_oi_intl_fy27,3.041,usd_bn,same
+h1_oi_intl_fy26,2.527,usd_bn,same
+h1_oi_sams_fy27,1.352,usd_bn,same
+h1_oi_sams_fy26,1.136,usd_bn,same
+h1_sales_us_fy27,242.358,usd_bn,same
+h1_sales_us_fy26,233.074,usd_bn,same
+h1_sales_intl_fy27,70.308,usd_bn,same
+h1_sales_intl_fy26,60.955,usd_bn,same
+h1_sales_sams_fy27,49.118,usd_bn,same
+h1_sales_sams_fy26,45.702,usd_bn,same
+h1_da_fy27,7.746,usd_bn,same
+h1_da_fy26,6.856,usd_bn,same
+h1_capex_fy27,14.181,usd_bn,same
+cash_jul26,11.529,usd_bn,"10-Q balance sheet"
+debt_jul26,57.2,usd_bn,"Q2 FY27 release, total debt incl. finance leases"
+buyback_h1_fy27,5.104,usd_bn,"10-Q, 42.3m shares at $120.71"
+buyback_remaining,25.1,usd_bn,"Q2 FY27 release"
+fy27_sales_guide_mid,0.045,share,"FY27 net sales cc +4.0% to 5.0% (Aug)"
+jbht_fsc_q2_26,641.46,usd_m,"J.B. Hunt 10-Q Q2 2026, fuel surcharge revenues"
+jbht_fsc_q2_25,351.862,usd_m,same
+ppi_tl_2026_02,183.307,index,"FRED PCU484121484121"
+ppi_tl_2026_08,207.644,index,same
+ppi_tl_2025_08,182.330,index,same
+cass_exp_2026_08,3.722,index,"FRED FRGEXPUSM649NCIS"
+cass_exp_2025_08,3.135,index,same
+cass_shp_2026_08,1.038,index,"FRED FRGSHPUSM649NCIS"
+cass_shp_2025_08,1.017,index,same
+tbill_3m,4.24,pct,"FRED DGS3MO 25 Sep 2026"
+low_target,110,usd,"Nasdaq analyst target low, 30 Sep 2026"

@@ -1,0 +1,99 @@
+company,ticker,amount_musd,measure,where_it_goes,filing
+Walmart,WMT,2900,received Q2 (to 31 Jul 2026),kept; company cites offsetting price investments,10-Q Q2 FY27
+Target,TGT,994,recognized in cost of sales Q2,kept,10-Q Q2 2026
+Nike,NKE,986,benefit in cost of sales FY26 Q4,kept,10-K FY26
+FedEx,FDX,749,customer refund obligations,owed to customers,10-K FY26
+Home Depot,HD,730,received ($685m to COGS),kept,10-Q Q2 FY26
+Amazon,AMZN,640,received Q2,kept,10-Q Q2 2026
+Gap,GAP,512,claims to COGS,~$95m to vendors,10-Q Q2 FY26
+Medline,MDLN,507,expected total,$89m accrued for customers,10-Q Q2 2026
+UPS,UPS,500,approved refunds held as liability,owed to customers,10-Q Q2 2026
+General Motors,GM,500,net favorable adjustment,kept,10-Q Q2 2026
+Ford,F,500,IEEPA cash recovery expected 2026,kept,10-Q Q2 2026
+Deere,DE,382,recorded (nine months),kept,10-Q Q3 FY26
+Dollar Tree,DLTR,369,received (+$14m interest),kept,10-Q Q2 FY26
+TJX,TJX,331,received (~$490m paid),$112m extra incentive pay accrued,10-Q Q2 FY27
+HP,HPQ,300,applied for,kept,10-Q Q3 FY26
+Ross Stores,ROST,253,recognized in COGS,kept,10-Q Q2 FY26
+Cardinal Health,CAH,200,receivable,part returned to customers,10-K FY26
+Williams-Sonoma,WSM,197.8,filed; $167.8m to COGS,$47.5m to vendors; $10m 401(k),10-Q Q2 FY26
+American Eagle,AEO,189.3,received (~$192m paid),$68.9m of claims sold for $18.6m,10-Q Q2 FY26
+Five Below,FIVE,163.6,COGS,kept,10-Q Q2 FY26
+Kohl's,KSS,150,received (~$190m paid),part shared with vendors and invested in value,10-Q Q2 FY26
+VF Corp,VFC,149.7,receivable,$37.6m to vendors and partners,10-Q Q1 FY27
+Victoria's Secret,VSCO,144,received ($148m incl. interest),kept,10-Q Q2 2026
+G-III Apparel,GIII,139.5,receivable,kept,10-Q Q1 FY27
+lululemon,LULU,134.5,COGS,kept,10-Q Q2 2026
+Carter's,CRI,130,claims submitted,kept,10-Q Q2 2026
+Fortune Brands,FBIN,122.1,receivable,kept,10-Q Q2 2026
+Stanley Black & Decker,SWK,118,Phase 1 gain in COGS,kept,10-Q Q2 2026
+Macy's,M,116,received,"""balanced approach to deploying benefits""",10-Q Q2 2026
+Tapestry,TPR,114.7,probable refund,kept,10-K FY26
+PVH,PVH,107,COGS,kept,10-Q Q2 FY26
+GE HealthCare,GEHC,106,2025 tariffs,kept,10-Q Q2 2026
+Newell Brands,NWL,100,2025 tariffs (plus $26m 2026),kept,10-Q Q2 2026
+Abercrombie & Fitch,ANF,100,COGS (+$3m interest),kept,10-Q Q2 FY26
+Dorman Products,DORM,98.1,recorded,kept,10-Q Q2 2026
+Urban Outfitters,URBN,95.7,COGS,kept,10-Q Q2 FY27
+Masco,MAS,95,net tariff benefit,kept,10-Q Q2 2026
+Keysight,KEYS,93,to cost of sales,kept,10-Q
+Steve Madden,SHOO,92.1,received,kept,10-Q Q2 2026
+Floor & Decor,FND,87,IEEPA tariffs paid,kept,10-Q Q2 2026
+Bath & Body Works,BBWI,85,received incl. interest,kept,10-Q Q2 2026
+Lear,LEA,85,IEEPA tariffs paid,nearly all already recovered from customers,10-Q Q2 2026
+Academy Sports,ASO,83.7,COGS,$72.2m remitted to claim buyer who paid $10.5m,10-Q Q2 FY26
+Polaris,PII,83,receivable,kept,10-Q Q2 2026
+Lowe's,LOW,80,recognized,kept,10-Q Q2 2026
+Xerox,XRX,80,receivable sold for $80m cash,sold to third party,10-Q Q2 2026
+Columbia Sportswear,COLM,78,incl. interest,kept,10-Q Q2 2026
+Baxter,BAX,75,COGS,kept,10-Q Q2 2026
+Best Buy,BBY,75,$34m Q2 + $41m on 2 Sep,kept,10-Q Q2 FY27
+Zebra,ZBRA,73,pretax benefit,kept,10-Q Q2 2026
+Generac,GNRC,71,COGS,kept,10-Q Q2 2026
+YETI,YETI,68.7,receivable,kept,10-Q Q2 2026
+Capri,CPRI,65,receivable (ASC 410-30),kept,10-K FY26
+Lucid,LCID,62.5,recorded six months,kept,10-Q Q2 2026
+Spectrum Brands,SPB,60.6,probable,kept,10-Q
+Brunswick,BC,60,total refunds,kept,10-Q Q2 2026
+Dick's Sporting Goods,DKS,59,received,kept,10-Q Q2 FY26
+Caleres,CAL,57.4,collected incl. interest,kept,10-Q Q2 FY26
+Burlington,BURL,55.5,benefit,kept,10-Q Q2 FY26
+Kontoor Brands,KTB,53.7,net receivable,kept,10-Q Q2 2026
+Mettler-Toledo,MTD,52.4,one-time benefit,$27.8m committed to customers,10-Q Q2 2026
+Adient,ADNT,52,receivable,large portion to customers,10-Q Q3 FY26
+Terex,TEX,51,claims filed,kept,10-Q Q2 2026
+Whirlpool,WHR,50,recovery and mitigation Q1,kept,10-Q Q1 2026
+Zurn Elkay,ZWS,47.6,recognized,kept,10-Q Q2 2026
+Acushnet,GOLF,45.1,recognized,kept,10-Q Q2 2026
+Bob's Discount Furniture,BOBS,45.1,approved claims,kept,10-Q
+Oxford Industries,OXM,45,eligible,kept,10-Q Q2 FY26
+Gentex,GNTX,42,IEEPA tariffs paid directly,kept,10-Q Q2 2026
+Lifetime Brands,LCUT,41.7,recognized,kept,10-Q Q2 2026
+Sonos,SONO,41,may be recoverable,kept,10-Q
+The Children's Place,PLCE,40,paid; mostly recovered,kept,10-Q Q2 FY26
+NOV,NOV,40,benefit,kept,10-Q Q2 2026
+Roku,ROKU,39.1,IEEPA refund,kept,10-Q Q2 2026
+Regal Rexnord,RRX,38.1,claims submitted,kept,10-Q Q2 2026
+Dillard's,DDS,37.2,recognized,kept,10-Q Q2 FY26
+Hamilton Beach,HBB,36.5,recognized,kept,10-Q Q2 2026
+Intuitive Surgical,ISRG,35.9,recognized,kept,10-Q Q2 2026
+Designer Brands,DBI,35.5,recoveries in gross profit,$18.3m remitted to an investor,10-Q Q2 FY26
+Flowserve,FLS,35.4,Phase 1 request,kept,10-Q
+McCormick,MKC,30.8,reimbursement,kept,10-Q
+Vishay,VSH,30,to be passed to customers,owed to customers,10-Q Q2 2026
+Hubbell,HUBB,30,received,kept,10-Q Q2 2026
+Zimmer Biomet,ZBH,30,favorable adjustment,kept,10-Q Q2 2026
+Lennox,LII,30,tariff refunds,kept,10-Q Q2 2026
+Ollie's,OLLI,29.4,recognized,kept,10-Q Q2 FY26
+Resideo,REZI,27,recognized,kept,10-Q Q2 2026
+Advance Auto Parts,AAP,26,recognized,kept,10-Q Q2 2026
+Eastman Chemical,EMN,24,benefit,kept,10-Q Q2 2026
+UFP Industries,UFPI,23,if collected,~$11m owed to customers,10-Q Q2 2026
+Power Solutions Intl,PSIX,22.7,received,held for customers,10-Q Q2 2026
+Funko,FNKO,22.1,receivable,kept,10-Q Q2 2026
+Genesco,GCO,21.8,received,kept,10-Q Q2 FY27
+Lovesac,LOVE,21,received incl. interest,kept,10-Q Q2 FY27
+Garmin,GRMN,21,received,kept,10-Q Q2 2026
+Crocs,CROX,20,refunds,kept,10-Q Q2 2026
+Toro,TTC,20,eligible,kept,10-Q Q3 FY26
+ADI Global Distribution,ADI,20,COGS,kept,10-Q Q2 2026

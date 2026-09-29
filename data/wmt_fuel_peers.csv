@@ -1,0 +1,37 @@
+item,value,unit,source
+diesel_2026_01,3.522,usd_gal,"FRED GASDESW (EIA weekly US No 2 diesel retail), monthly average of weekly data"
+diesel_2026_02,3.722,usd_gal,same
+diesel_2026_03,4.921,usd_gal,same
+diesel_2026_04,5.501,usd_gal,same
+diesel_2026_05,5.599,usd_gal,same
+diesel_2026_06,5.024,usd_gal,same
+diesel_2026_07,4.955,usd_gal,same
+diesel_2026_08,5.462,usd_gal,same
+diesel_2026_09,6.291,usd_gal,"same (September to date)"
+diesel_latest,6.382,usd_gal,"FRED GASDESW week of 28 Sep 2026"
+diesel_2025_avg,3.662,usd_gal,"FRED GASDESW, 2025 monthly averages"
+eia_diesel_2026,5.07,usd_gal,"EIA STEO 9 Sep 2026, retail diesel annual average forecast"
+eia_diesel_2027,4.40,usd_gal,"same, 2027"
+eia_brent_2027,74,usd_bbl,"same"
+fuel_increment_fy27,2.0,usd_bn,"Walmart Q2 FY27 call: more than $2 billion of incremental fuel-related costs this year above original guidance, assuming current rates"
+refund_q2,2.9,usd_bn,"Walmart 10-Q"
+vibe_hit_pts,0.2,pts,"Walmart Q2 call: Vibe ~20bp headwind to OI growth"
+fy26_adj_oi,31.0,usd_bn,"guidance base"
+oi_guide_mid_feb,0.07,share,"original FY27 adj OI guide +6% to +8%"
+oi_guide_mid_aug,0.0775,share,"August FY27 adj OI guide +7% to +8.5%"
+eps_guide_mid_aug,2.835,usd,"August FY27 EPS guide midpoint"
+diluted_shares,7.978,bn,"SEC XBRL Q2 FY27"
+tax,0.245,share,"adjusted ETR guide 23.5% to 24.5%, upper end; Q2 adjusted 24.8%"
+consensus_fy28,3.22,usd,"Nasdaq, 16 estimates"
+price,108.73,usd,"28 Sep 2026 close"
+shares_out,7.934,bn,"implied by Nasdaq market cap"
+fcf_fy26,14.923,usd_bn,"Walmart free cash flow FY26"
+fcf_h1_fy26,6.943,usd_bn,"H1 FY26"
+fcf_h1_fy27,5.529,usd_bn,"H1 FY27"
+pe_cost,40.5,x,"COST $922.92 / FY Aug 2027 consensus $22.80 (Nasdaq)"
+pe_amzn,23.4,x,"AMZN $246.15 / CY2027 $10.52"
+pe_bj,19.2,x,"BJ $96.81 / FY Jan 2028 $5.03"
+pe_tgt,16.9,x,"TGT $158.43 / FY Jan 2028 $9.40"
+pe_dg,14.8,x,"DG $124.37 / FY Jan 2028 $8.40"
+pe_kr,10.7,x,"KR $59.69 / FY Jan 2028 $5.56"
+short_interest,80.59,m_shares,"Nasdaq, settlement 15 Sep 2026; 3.9 days to cover"
