@@ -1,0 +1,14 @@
+2026 Q1, $bn (prior four-quarter average in brackets):
+  federal_capital_transfers_paid     202.0  ( 36.1)
+  nonfin_corporate_received          141.5  (  2.9)
+  nonfin_noncorporate_received        24.8  (  1.9)
+  households_received                  4.8  ( 11.1)
+  rest_of_world_received               3.2  (  2.1)
+  financial_business_received          0.0  (  0.1)
+
+Federal capital transfers paid, jump over prior-year average: $165.9bn
+Nonfinancial corporations $141.5bn + noncorporate business $24.75bn = $166.2bn
+Corporate share 85%, noncorporate share 15%
+Households: 4.8bn in Q1 2026, no jump (prior-year average 11.1bn)
+
+Disclosed by the 98 largest listed disclosers: $16.9bn = 10% of the total

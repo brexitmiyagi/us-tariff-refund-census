@@ -1,0 +1,11 @@
+Industry            2024 avg  IEEPA avg  change   trough (quarter)   cumulative shortfall, $bn
+Wholesale trade        293.9      229.1   -22.0%    206.2 (2025Q3)     +64.8
+Retail trade           409.1      410.9    +0.4%    402.6 (2025Q3)      -1.8
+Manufacturing          704.3      721.5    +2.5%    648.6 (2025Q2)     -17.3
+Motor vehicles          18.9       -1.6  -108.5%    -17.7 (2025Q2)     +20.5
+All domestic nonfin   2911.2     2824.9    -3.0%   2652.8 (2025Q2)     +86.4
+
+Wholesale trough 206.2 vs 2024 avg 293.9: -29.8%
+Wholesale 2026Q1 262.5: recovered 56.3 of the 87.7 lost (64%)
+Wholesale share of the domestic nonfinancial shortfall: 75%
+Cross-check: the incidence split (NY Fed + Fed Board) puts at most $99.6bn on US businesses; NIPA domestic nonfinancial shortfall over the same year is $86.4bn.

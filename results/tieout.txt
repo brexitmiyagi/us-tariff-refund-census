@@ -1,0 +1,4 @@
+FY2026 to August gross_musd    sum of months 292533, Treasury FYTD 292533  OK
+FY2026 to August refunds_musd  sum of months 125224, Treasury FYTD 125225  OK
+FY2026 to August net_musd      sum of months 167309, Treasury FYTD 167308  OK
+FY2025 to August net sum of months 165191, Treasury prior FYTD 165191  OK

@@ -1,0 +1,66 @@
+1. REFUND SPLIT ($bn)
+   Feb plan 33.17; Aug guide 33.40 (+0.23); refund 2.90 - fuel 2.00+ - Vibe 0.06 - raise 0.23 = residual 0.61
+   residual = price investment plus anything else that moved against plan; annualised (second half only) 1.21
+
+2. FUEL SENSITIVITY, NY HARBOR ULSD SPOT ($bn of operating income per $1/gal for a year)
+   Q1 FY23 (2022, US only): $160m vs Feb-Apr 2022 avg $0.693 above Feb 2022 ($2.87) -> 0.92
+   Q1 FY27: $175m vs Feb-Apr 2026 avg $0.980 above Feb 2026 ($2.50) -> 0.71
+   FY27 guide: $2.0bn+ vs FY avg $3.937 (Aug held) = $1.436 above Feb -> 1.39 (a floor)
+   low 0.71 / mid (mean of three) 1.01 / high 1.39; Sam's Club fuel profit NOT netted
+   EPS per $1/gal a year at mid: $0.096; FY28 diluted shares 7.940bn (-0.47%, Q2 y/y trend)
+
+3. FUTURES (CME NY Harbor ULSD, 28 Sep 2026), wholesale, no retail spread
+   FY27: Feb-Sep actual spot + Oct-Jan futures avg $4.477 -> FY avg $4.070 vs $3.937 assumed
+   extra FY27 fuel not in guidance: low/mid/high $0.10/0.13/0.19bn; mid = $0.013/sh
+   FY28 strip avg $3.644, $1.143 above Feb 2026; fuel above plan at mid $1.15bn = $0.110/sh
+   bull path: Jan-28 contract held $3.240; bear path: Oct-26 contract held $4.755
+
+4. WHAT $3.22 NEEDS
+   below-the-line items held at FY27 guide level: $3.45bn; OI needed $37.31bn
+   Feb diesel, no rollbacks: +12.5% on the Feb plan of $33.17bn
+   strip, no rollbacks: +16.0% on the Feb plan of $33.17bn
+   strip, half rollbacks: +17.8% on the Feb plan of $33.17bn
+   Jan-28 held, no rollbacks: +14.7% on the Feb plan of $33.17bn
+   own FY27E $2.82
+
+5. WALMART'S OWN RECORD
+   adjusted OI growth FY21-FY26: +9.3%, +11.2%, -5.2%, +10.2%, +9.7%, +5.4%; median +9.5%, max +11.2%
+   FY23 first guide day: $46.29 / $2.272 = 20.4x
+   FY24 first guide day: $49.11 / $1.992 = 24.7x
+   FY25 first guide day: $58.62 / $2.300 = 25.5x
+   FY26 first guide day: $97.21 / $2.550 = 38.1x
+   FY27 first guide day: $124.87 / $2.800 = 44.6x
+   guide-day multiples, 25th / median / 75th percentile: 24.7x / 25.5x / 38.1x
+
+6. FY28 EPS GRID (mid sensitivity, half the rollbacks kept)
+   $3.24  $2.92  $2.97  $3.04
+   $3.64  $2.88  $2.93  $3.01
+   $4.20  $2.83  $2.87  $2.95
+   $4.76  $2.77  $2.82  $2.90
+   sensitivity at strip, 8.5%, half: low/mid/high $2.96, $2.93, $2.89
+
+   cases (bear/bull multiples = 25th/75th percentile of first-guide-day multiples; base = today's 33.8x)
+   Bear 25%: g 7.0%, diesel $4.76, rollbacks kept 100%, OI $32.00bn -> EPS $2.72 x 24.7 = $66.96
+   Base 50%: g 8.5%, diesel $3.64, rollbacks kept 50%, OI $34.23bn -> EPS $2.93 x 33.8 = $98.84
+   Bull 25%: g 11.0%, diesel $3.24, rollbacks kept 0%, OI $36.07bn -> EPS $3.10 x 38.1 = $118.27
+   weighted $95.73 (-12.0%); total return incl. $0.99 dividend -11.0%; 3m bill 4.24%
+
+7. SUMMARY MODEL
+   FY26A adj OI: US 25.20, Intl (cc) 5.90, Sam's 2.52, corporate/other plug -2.62 = 31.00
+   H1 FY27 OI growth: US +12.8%, Intl +20.3% (reported), Sam's +19.0% (refund inside)
+   H1 FY27 sales growth: US +4.0%, Intl +15.3%, Sam's +7.5%
+   FY28E underlying OI: US 29.04 (+7.3%/yr), Intl 7.01 (+9%/yr), Sam's 2.83 (+6%/yr), corporate -2.89 (+5%/yr) = 35.99
+   less fuel above Feb plan 1.15, less half the rollbacks 0.61 -> FY28E adj OI 34.23; below-line 3.45; tax 24.5%; shares 7.940 -> EPS $2.93
+   D&A: FY26A 14.20, FY27E 16.05 (+13.0%, H1 rate), FY28E 17.61; FY28 increase 1.56bn = 4.7% of the Feb plan OI
+   sales FY26A 706.4, FY27E 738.2 (+4.5% guide mid), FY28E 767.7 (+4.0%)
+   OCF FY26A 41.6, FY27E 44.6, FY28E 46.3; capex at 4% of sales 29.5 / 30.7; FCF FY27E 15.1, FY28E 15.6
+   net debt Jul-26 45.7bn; buybacks H1 5.1bn, 25.1bn authorised
+
+8. OWNER-EARNINGS DCF (8% cost of equity, 3% terminal)
+   owner earnings TTM 27.8bn (3.2%); price needs 8.2% a year for ten years
+   my FY26A-FY28E EPS growth 5.3% a year; at that rate for ten years the value is $86.68 a share
+
+9. FREIGHT
+   PPI long-distance truckload: Feb-26 to Aug-26 +13.3%, y/y +13.9%
+   Cass expenditures y/y +18.7%, shipments +2.1%, implied spend per shipment +16.3%
+   J.B. Hunt fuel surcharge revenue Q2 641m vs 352m (+82%)

@@ -1,0 +1,14 @@
+Forward P/E on consensus: CPRI 5.8x, PVH 6.0x, KTB 10.2x, VFC 10.5x, GIII 11.1x, OXM 11.3x, LEVI 11.6x, TPR 12.9x, COLM 13.6x, RL 17.2x
+Median of nine peers 11.3x; median of the six closest (PVH, OXM, KTB, LEVI, VFC, CPRI) 10.4x
+FY27 non-GAAP guidance midpoint: $99.0m, $2.25 a share, 44.0m shares
+bear: -25, -25, -15, -10 -> -75 pre-tax -> EPS $1.09 x 9.0 = $9.85 (weight 20%)
+base: -20, -20, +0, +15 -> -25 pre-tax -> EPS $1.86 x 10.5 = $19.58 (weight 55%)
+bull: -10, -15, +10, +40 -> +25 pre-tax -> EPS $2.64 x 12.0 = $31.62 (weight 25%)
+Probability-weighted value $20.64 vs $27.13 price (-24%)
+Consensus FY28 $2.44 is +8% on FY27 guidance; at 10.5x it is worth $25.62
+Each $10m pre-tax = $0.15 a share of EPS = $1.62 of value at 10.5x
+Book value per share $43.12 (P/B 0.63); ex-trademarks $27.97
+  item 1: tariff on goods the refund made duty-free
+  item 2: interest (cash spent, revolver drawn)
+  item 3: Calvin Klein/Tommy exit net of go-forward growth
+  item 4: Marc Jacobs contribution
