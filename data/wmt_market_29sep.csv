@@ -1,0 +1,37 @@
+item,value,unit,source
+price,106.80,usd,"Nasdaq, WMT close 29 Sep 2026"
+ulsd_fut_oct26,4.8979,usd_gal,"CME NY Harbor ULSD settlement 29 Sep 2026"
+ulsd_fut_nov26,4.5100,usd_gal,same
+ulsd_fut_dec26,4.3323,usd_gal,same
+ulsd_fut_jan27,4.2261,usd_gal,same
+ulsd_fut_feb27,4.1278,usd_gal,same
+ulsd_fut_mar27,4.0126,usd_gal,same
+ulsd_fut_apr27,3.8830,usd_gal,same
+ulsd_fut_may27,3.7625,usd_gal,same
+ulsd_fut_jun27,3.6492,usd_gal,same
+ulsd_fut_jul27,3.5811,usd_gal,same
+ulsd_fut_aug27,3.5314,usd_gal,same
+ulsd_fut_sep27,3.4952,usd_gal,same
+ulsd_fut_oct27,3.4591,usd_gal,same
+ulsd_fut_nov27,3.4065,usd_gal,same
+ulsd_fut_dec27,3.3326,usd_gal,same
+ulsd_fut_jan28,3.2531,usd_gal,same
+px_cost,924.59,usd,"Nasdaq close 29 Sep 2026"
+px_amzn,246.67,usd,same
+px_bj,95.49,usd,same
+px_tgt,156.43,usd,same
+px_dg,122.64,usd,same
+px_kr,60.79,usd,same
+fleet_miles,1.0,bn_miles,"Walmart careers page, private fleet: 1 billion miles a year, 16,000 Class A drivers"
+truck_mpg,6.7,mpg,"FHWA Highway Statistics 2023, Table VM-1, combination trucks"
+ttm_ebitda,44.07,usd_bn,"S&P Global via StockAnalysis, 30 Sep 2026, trailing 12 months"
+ev_30sep,893.75,usd_bn,"same, intraday 30 Sep 2026"
+ev_ebitda_cost,27.51,x,"same"
+ev_ebitda_amzn,16.75,x,same
+ev_ebitda_bj,12.32,x,same
+ev_ebitda_dg,11.31,x,same
+ev_ebitda_tgt,9.87,x,same
+ev_ebitda_kr,7.19,x,same
+opt_spot_30sep,104.64,usd,"Nasdaq option chain, 30 Sep 2026 about 2:50pm ET"
+opt_nov20_105c_mid,4.825,usd,"Nov 20 2026 105 call, bid 4.80 ask 4.85"
+opt_nov20_105p_mid,4.475,usd,"Nov 20 2026 105 put, bid 4.40 ask 4.55"
