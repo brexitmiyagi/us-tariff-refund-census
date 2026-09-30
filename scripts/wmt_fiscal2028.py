@@ -3,7 +3,8 @@ a three-statement and quarterly model, and a fair value and 12-month target.
 
 Inputs (all in data/): wmt_fuel_peers.csv, wmt_futures_cashflow.csv, wmt_history_segments_freight.csv,
 wmt_market_29sep.csv (price and CME strip of 29 Sep 2026, loaded last so it wins), wmt_fy26_statements.csv,
-wmt_quarterly_peers.csv. Growth rates, weights, the mix gain and the cost of new debt are my calls.
+wmt_quarterly_peers.csv. Growth rates, weights, the mix gain and the cost of new debt are my calls. Section 8 presents the top-down
+forecast as an income statement; section 13 rebuilds it bottom-up from gross margin and SG&A as a check.
 """
 import csv, os, statistics as st
 HERE = os.path.dirname(os.path.abspath(__file__)); D = os.path.join(HERE, "..", "data")
@@ -53,8 +54,6 @@ extra_q3, extra_q4 = (x_sep + x_oct) / 12 * s_mid, x_q4 / 12 * s_mid
 
 # 4. below-the-line, interest on new debt (base-case debt path, computed in section 9 and fed back)
 below27 = aug - v["eps_guide_mid_aug"] * sh27 / (1 - tax)
-def run(int28=0.0, int29=0.0):
-    return dict(b28=below27 + int28, b29=below27 + int29)
 roll = 2 * resid
 def oi28(g, d, keep, s=s_mid, r=roll): return plan * (1 + g) - s * max(d - feb26, 0) - keep * r
 def oi29(g, d, keep, s=s_mid, r=roll): return plan * (1 + g) ** 2 - s * max(d - feb26, 0) - keep * r
@@ -205,3 +204,41 @@ P("\n12. CROSS-CHECKS")
 P(f"   truckload PPI y/y {v['ppi_tl_2026_08']/v['ppi_tl_2025_08']-1:+.1%}; J.B. Hunt fuel surcharge revenue {v['jbht_fsc_q2_26']/v['jbht_fsc_q2_25']-1:+.0%}")
 strad = v["opt_nov20_105c_mid"] + v["opt_nov20_105p_mid"]
 P(f"   Nov 20 105 straddle ${strad:.2f} = {strad/v['opt_spot_30sep']:.1%}; EV/EBITDA {v['ev_30sep']/v['ttm_ebitda']:.1f}x, ex refund {v['ev_30sep']/(v['ttm_ebitda']-v['refund_q2']):.1f}x")
+
+# 13. bottom-up cross-check: gross margin and SG&A as drivers
+# Gross margin: FY26 actual plus last year's mix gain (FY25 to FY26), plus refund, less fuel and price.
+# SG&A: grows with sales, plus depreciation growing faster than sales, less a leverage term calibrated so FY27
+# lands on Walmart's own guidance (less the extra fuel), then held at the same share of sales.
+gm25 = 1 - v["cost_of_sales_fy25"] / v["net_sales_fy25"]
+mix_act = gm26 - gm25
+gmb = [gm26] + [gm26 + mix_act * i + (refund_oi[i] - fuel_oi[i] - price_oi[i]) / nsales[i] for i in (1, 2, 3)]
+gpb = [g * n for g, n in zip(gmb, nsales)]
+sgab = [sga[0]]
+for i in (1, 2, 3):
+    gr = nsales[i] / nsales[i-1] - 1
+    sgab.append(sgab[-1] * (1 + gr) + (S["da"][i] - S["da"][i-1] * (1 + gr)))
+lev27 = (gpb[1] + mem[1] - sgab[1]) - S["oi"][1]          # negative means SG&A has to leverage to hit the guide
+lev_share = -lev27 / nsales[1]
+sgab = [sgab[0], sgab[1] + lev27] + [None, None]
+for i in (2, 3):
+    gr = nsales[i] / nsales[i-1] - 1
+    sgab[i] = sgab[i-1] * (1 + gr) + (S["da"][i] - S["da"][i-1] * (1 + gr)) - lev_share * nsales[i]
+oib = [gpb[i] + mem[i] - sgab[i] for i in range(4)]
+eb28 = (oib[2] - b28) * (1 - tax) / sh28; eb29 = (oib[3] - b29) * (1 - tax) / sh29
+P(f"\n13. BOTTOM-UP CROSS-CHECK (mix {mix_act:+.2%} a year, FY25 {gm25:.2%} -> FY26 {gm26:.2%})")
+P(f"   SG&A leverage needed to hit the FY27 guide: {-lev27:.2f}bn ({lev_share:.2%} of sales), held for FY28-FY29")
+for i, y in ((1, "FY27E"), (2, "FY28E"), (3, "FY29E")):
+    P(f"   {y}: GM {gmb[i]:.2%}, SG&A {sgab[i]/nsales[i]:.2%} -> OI {oib[i]:.2f} vs top-down {S['oi'][i]:.2f} ({oib[i]-S['oi'][i]:+.2f})")
+P(f"   bottom-up EPS FY28 ${eb28:.2f}, FY29 ${eb29:.2f} (top-down ${S['eps'][2]:.2f}, ${S['eps'][3]:.2f})")
+cases_b = [(.25, eps28(oi28(.07, fut('oct26'), 1.0)) + (eb28 - S['eps'][2]), eps29(oi29(.07, fut('oct26'), 1.0)) + (eb29 - S['eps'][3]), m_bear),
+           (.50, eb28, eb29, pe_now),
+           (.25, eps28(oi28(.11, fut('jan28'), 0.0)) + (eb28 - S['eps'][2]), eps29(oi29(.11, fut('jan28'), 0.0)) + (eb29 - S['eps'][3]), m_bull)]
+P(f"   same gap applied to all cases: fair value ${sum(w*e8*m for w,e8,e9,m in cases_b):.2f}, 12-month target ${sum(w*e9*m for w,e8,e9,m in cases_b):.2f}")
+
+# 14. target sensitivity to the base case's underlying growth
+P("\n14. 12-MONTH TARGET BY BASE-CASE UNDERLYING GROWTH (bear and bull unchanged)")
+for gb in (0.06, 0.07, 0.085, 0.10, 0.11):
+    e8 = eps28(oi28(gb, fy28, .5)); e9 = eps29(oi29(gb, fut("jan28"), .5))
+    t = .25 * eps29(oi29(.07, fut("oct26"), 1.0)) * m_bear + .5 * e9 * pe_now + .25 * eps29(oi29(.11, fut("jan28"), 0.0)) * m_bull
+    f = .25 * eps28(oi28(.07, fut("oct26"), 1.0)) * m_bear + .5 * e8 * pe_now + .25 * eps28(oi28(.11, fut("jan28"), 0.0)) * m_bull
+    P(f"   {gb:.1%}: FY28 EPS {e8:.2f}, FY29 EPS {e9:.2f}; fair value ${f:.2f}; target ${t:.2f} ({t/v['price']-1:+.1%})")
