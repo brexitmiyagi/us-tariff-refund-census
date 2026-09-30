@@ -1,0 +1,35 @@
+item,value,unit,source
+revenue_fy26,713.163,usd_bn,"SEC XBRL companyfacts, Revenues, FY to 31 Jan 2026"
+net_sales_fy26,706.413,usd_bn,"RevenueFromContractWithCustomerExcludingAssessedTax"
+membership_fy26,6.750,usd_bn,"revenue less net sales"
+cost_of_sales_fy26,535.395,usd_bn,CostOfRevenue
+sga_fy26,147.943,usd_bn,SellingGeneralAndAdministrativeExpense
+oi_gaap_fy26,29.825,usd_bn,OperatingIncomeLoss
+interest_net_fy26,2.431,usd_bn,InterestIncomeExpenseNonoperatingNet (sign flipped)
+pretax_fy26,29.469,usd_bn,IncomeLossFromContinuingOperationsBeforeIncomeTaxes
+tax_fy26,7.199,usd_bn,IncomeTaxExpenseBenefit
+ni_consolidated_fy26,22.270,usd_bn,ProfitLoss
+nci_fy26,0.377,usd_bn,NetIncomeLossAttributableToNoncontrollingInterest
+ni_wmt_fy26,21.893,usd_bn,NetIncomeLoss
+eps_gaap_fy26,2.73,usd,EarningsPerShareDiluted
+eps_adj_fy26,2.64,usd,"Q4 FY26 release"
+shares_dil_fy26,8.022,bn,WeightedAverageNumberOfDilutedSharesOutstanding
+cash_fy26,10.727,usd_bn,"balance sheet 31 Jan 2026"
+inventory_fy26,58.851,usd_bn,InventoryNet
+ppe_fy26,136.083,usd_bn,PropertyPlantAndEquipmentNet
+total_assets_fy26,284.668,usd_bn,Assets
+ap_fy26,63.061,usd_bn,AccountsPayableCurrent
+st_borrow_fy26,6.596,usd_bn,ShortTermBorrowings
+ltd_current_fy26,3.542,usd_bn,LongTermDebtCurrent
+ltd_fy26,34.624,usd_bn,LongTermDebtNoncurrent
+finance_lease_fy26,6.761,usd_bn,FinanceLeaseLiability
+equity_wmt_fy26,99.617,usd_bn,StockholdersEquity
+ocf_fy26,41.565,usd_bn,NetCashProvidedByUsedInOperatingActivities
+capex_fy26,26.642,usd_bn,PaymentsToAcquirePropertyPlantAndEquipment
+dividends_fy26,7.507,usd_bn,PaymentsOfDividendsCommonStock
+buybacks_fy26,8.088,usd_bn,PaymentsForRepurchaseOfCommonStock
+nci_h1_fy27,0.323,usd_bn,"10-Q Q2 FY27, six months"
+membership_h1_fy27,3.904,usd_bn,"10-Q Q2 FY27, six months"
+membership_h1_fy26,3.280,usd_bn,same
+tbill_3m_28sep,4.28,pct,"FRED DGS3MO 28 Sep 2026"
+q3_eps_high,0.66,usd,"Nasdaq quarterly forecast, Oct 2026 quarter high estimate"
