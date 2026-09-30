@@ -88,3 +88,46 @@
    fuel sensitivity mid: $94.78
    fuel sensitivity high: $93.31
    everything kind at once (bear 33.2x, base 40%, low fuel): $102.54
+
+14. WHAT $3.22 NEEDS, BY FISCAL 2027 UNDERLYING GROWTH
+   FY27 underlying 7%: base $33.17bn, H2 price investment $0.61bn ($1.21bn a year); Feb diesel/no rollbacks +12.5%, strip/no rollbacks +15.9%, strip/half kept +17.7%
+   FY27 underlying 8%: base $33.48bn, H2 price investment $0.92bn ($1.83bn a year); Feb diesel/no rollbacks +11.4%, strip/no rollbacks +14.8%, strip/half kept +17.6%
+   FY27 underlying 9%: base $33.79bn, H2 price investment $1.23bn ($2.45bn a year); Feb diesel/no rollbacks +10.4%, strip/no rollbacks +13.8%, strip/half kept +17.4%
+   FY27 underlying 10%: base $34.10bn, H2 price investment $1.54bn ($3.07bn a year); Feb diesel/no rollbacks +9.4%, strip/no rollbacks +12.7%, strip/half kept +17.2%
+   share count -0.5%: need $37.30bn, +12.5% on the Feb plan
+   share count -1.2%: need $37.06bn, +11.7% on the Feb plan
+
+15. FISCAL 2029 AND THE 12-MONTH TARGET (same growth two years running; FY29 diesel = Jan-28 contract, bear keeps Oct-26)
+   Bear: FY29 OI $34.34bn, EPS $2.95 x 24.7 = $72.79
+   Base: FY29 OI $37.68bn, EPS $3.27 x 33.2 = $108.49
+   Bull: FY29 OI $40.11bn, EPS $3.50 x 38.1 = $133.53
+   12-month target $105.83 (-0.9%); with dividend +0.0%; 3m bill 4.28%
+   fair value today (FY28 EPS) $94.78
+
+16. THREE-STATEMENT SUMMARY ($bn)
+                                        FY26A     FY27E     FY28E     FY29E
+   Net sales                           706.41    738.20    767.73    798.44
+   Membership and other income           6.75      7.56      8.32      9.15
+   Adjusted operating income            31.00     33.26     34.25     37.68
+   Operating margin, % of net sales      4.39      4.51      4.46      4.72
+   Interest, net                         2.43      2.68      2.68      2.68
+   Pretax (adjusted)                    28.57     30.58     31.57     35.00
+   Tax at 24.5%                          7.00      7.49      7.73      8.58
+   Noncontrolling interest               0.39      0.58      0.58      0.58
+   Net income to Walmart (adjusted)     21.18     22.51     23.26     25.85
+   Diluted shares (bn)                   8.02      7.98      7.94      7.90
+   Adjusted EPS ($)                      2.64      2.82      2.93      3.27
+   Operating cash flow                  41.56     44.64     46.95     50.95
+   Capital expenditure                  26.64     29.53     30.71     31.94
+   Free cash flow                       14.92     15.11     16.24     19.01
+   Dividends                             7.51      7.90      8.25      8.63
+   Buybacks                              8.09     10.00     10.00     10.00
+   Cash                                 10.73     10.73     10.73     10.73
+   Inventory                            58.85     61.50     63.96     66.52
+   Property and equipment, net         136.08    149.56    162.66    175.58
+   Total debt incl. finance leases      51.52     54.31     56.32     55.94
+   Walmart shareholders' equity         99.62    104.23    109.23    116.46
+   Net debt / EBITDA (x)                 0.90      0.88      0.88      0.80
+   Return on equity, %                  21.26     21.60     21.29     22.20
+   FY26 income lines are adjusted where Walmart gives them (OI $31.0bn, EPS $2.64); NCI there is the implied adjusted figure.
+   GAAP FY26 for reference: OI 29.825, pretax 29.469, net income to Walmart 21.893, EPS 2.73
