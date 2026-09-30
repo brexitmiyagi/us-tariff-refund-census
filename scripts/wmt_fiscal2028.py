@@ -177,3 +177,68 @@ for wbase in (0.4, 0.5, 0.6):
 for lab, s in (("low", s_low), ("mid", s_mid), ("high", s_high)):
     P(f"   fuel sensitivity {lab}: ${weighted(s=s):.2f}")
 P(f"   everything kind at once (bear 33.2x, base 40%, low fuel): ${weighted(mb=pe_now, wb=0.3, wbase=0.4, s=s_low):.2f}")
+
+# ---------- 14. fiscal 2027 underlying growth: how the base changes what $3.22 needs
+v.update(load("wmt_fy26_statements.csv"))
+P("\n14. WHAT $3.22 NEEDS, BY FISCAL 2027 UNDERLYING GROWTH")
+for u in (0.07, 0.08, 0.09, 0.10):
+    b = base * (1 + u); pi = resid + (b - plan); r = 2 * pi
+    P(f"   FY27 underlying {u:.0%}: base ${b:.2f}bn, H2 price investment ${pi:.2f}bn (${r:.2f}bn a year); "
+      f"Feb diesel/no rollbacks {need/b-1:+.1%}, strip/no rollbacks {(need+s_mid*(fy28-feb26))/b-1:+.1%}, strip/half kept {(need+s_mid*(fy28-feb26)+r/2)/b-1:+.1%}")
+for sh in (0.995, 0.988):
+    n2 = aug + (v["consensus_fy28"]*sh27*sh - v["eps_guide_mid_aug"]*sh27) / (1 - tax)
+    P(f"   share count {sh-1:+.1%}: need ${n2:.2f}bn, {n2/plan-1:+.1%} on the Feb plan")
+
+# ---------- 15. fiscal 2029 and the 12-month target
+sh29 = sh28 * (v["shares_q2_fy27"] / v["shares_q2_fy26"])
+def oi29(g, d29, keep): return plan * (1 + g) ** 2 - s_mid * max(d29 - feb26, 0) - keep * roll
+eps29 = lambda o: (o - below) * (1 - tax) / sh29
+P("\n15. FISCAL 2029 AND THE 12-MONTH TARGET (same growth two years running; FY29 diesel = Jan-28 contract, bear keeps Oct-26)")
+c29 = [("Bear", .25, .07, fut("oct26"), 1.0, m_bear), ("Base", .50, .085, fut("jan28"), .5, pe_now), ("Bull", .25, .11, fut("jan28"), 0.0, m_bull)]
+t12 = 0
+for n, w, g, d, k, m in c29:
+    e = eps29(oi29(g, d, k)); t12 += w * e * m
+    P(f"   {n}: FY29 OI ${oi29(g,d,k):.2f}bn, EPS ${e:.2f} x {m:.1f} = ${e*m:.2f}")
+P(f"   12-month target ${t12:.2f} ({t12/v['price']-1:+.1%}); with dividend {(t12+v['dividend_annual'])/v['price']-1:+.1%}; 3m bill {v['tbill_3m_28sep']}%")
+P(f"   fair value today (FY28 EPS) ${tot:.2f}")
+
+# ---------- 16. three-statement summary (adjusted income statement; estimates are mine)
+P("\n16. THREE-STATEMENT SUMMARY ($bn)")
+ns = [v["net_sales_fy26"]]; [ns.append(ns[-1] * (1 + gr)) for gr in (v["fy27_sales_guide_mid"], 0.04, 0.04)]
+mem = [v["membership_fy26"]]; [mem.append(mem[-1] * (1 + gr)) for gr in (0.12, 0.10, 0.10)]
+oi_ = [v["fy26_adj_oi"], aug - extra27[1], oi28(0.085, fy28, 0.5), oi29(0.085, fut("jan28"), 0.5)]
+interest = [v["interest_net_fy26"]] + [v["interest_net_fy26"] + 0.25] * 3      # FY27 guide: up $200-300m
+shs = [v["shares_dil_fy26"], sh27, sh28, sh29]
+eps_ = [v["eps_adj_fy26"], own27, eps28(oi_[2]), eps29(oi_[3])]
+ni_wmt = [e * s_ for e, s_ in zip(eps_, shs)]
+pretax = [o - i for o, i in zip(oi_, interest)]
+ni_cons = [p * (1 - tax) for p in pretax]
+nci = [c - w for c, w in zip(ni_cons, ni_wmt)]
+da = [da26, da27, da28, da28 * 1.08]
+capex = [v["capex_fy26"]] + [0.04 * x for x in ns[1:]]
+other = v["op_cash_flow_fy26"] * 0 + (ocf27 - ni_cons[1] - da[1])
+ocf = [v["ocf_fy26"], ocf27] + [ni_cons[i] + da[i] + other for i in (2, 3)]
+fcf = [o - c for o, c in zip(ocf, capex)]
+dps = [0.94, v["dividend_annual"], v["dividend_annual"] * 1.05, v["dividend_annual"] * 1.05 ** 2]
+div = [v["dividends_fy26"]] + [d * s_ for d, s_ in zip(dps[1:], shs[1:])]
+bb = [v["buybacks_fy26"], 10.0, 10.0, 10.0]
+debt = [v["st_borrow_fy26"] + v["ltd_current_fy26"] + v["ltd_fy26"] + v["finance_lease_fy26"]]
+for i in (1, 2, 3): debt.append(debt[-1] - (fcf[i] - div[i] - bb[i]))
+cash = [v["cash_fy26"]] * 4
+eq = [v["equity_wmt_fy26"]]
+for i in (1, 2, 3): eq.append(eq[-1] + ni_wmt[i] - div[i] - bb[i])
+ppe = [v["ppe_fy26"]]
+for i in (1, 2, 3): ppe.append(ppe[-1] + capex[i] - da[i])
+inv = [v["inventory_fy26"] * x / ns[0] for x in ns]
+yrs = ["FY26A", "FY27E", "FY28E", "FY29E"]
+rows = [("Net sales", ns), ("Membership and other income", mem), ("Adjusted operating income", oi_), ("Operating margin, % of net sales", [100*o/n for o, n in zip(oi_, ns)]),
+        ("Interest, net", interest), ("Pretax (adjusted)", pretax), ("Tax at 24.5%", [p*tax for p in pretax]), ("Noncontrolling interest", nci),
+        ("Net income to Walmart (adjusted)", ni_wmt), ("Diluted shares (bn)", shs), ("Adjusted EPS ($)", eps_),
+        ("Operating cash flow", ocf), ("Capital expenditure", capex), ("Free cash flow", fcf), ("Dividends", div), ("Buybacks", bb),
+        ("Cash", cash), ("Inventory", inv), ("Property and equipment, net", ppe), ("Total debt incl. finance leases", debt),
+        ("Walmart shareholders' equity", eq), ("Net debt / EBITDA (x)", [(d - c) / (o + a) for d, c, o, a in zip(debt, cash, oi_, da)]),
+        ("Return on equity, %", [100 * n / e for n, e in zip(ni_wmt, eq)])]
+P("   " + " " * 34 + "  ".join(f"{y:>8}" for y in yrs))
+for lab, xs in rows: P(f"   {lab:<34}" + "  ".join(f"{x:8.2f}" for x in xs))
+P("   FY26 income lines are adjusted where Walmart gives them (OI $31.0bn, EPS $2.64); NCI there is the implied adjusted figure.")
+P(f"   GAAP FY26 for reference: OI {v['oi_gaap_fy26']}, pretax {v['pretax_fy26']}, net income to Walmart {v['ni_wmt_fy26']}, EPS {v['eps_gaap_fy26']}")
