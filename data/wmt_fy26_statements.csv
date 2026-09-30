@@ -33,3 +33,5 @@ membership_h1_fy27,3.904,usd_bn,"10-Q Q2 FY27, six months"
 membership_h1_fy26,3.280,usd_bn,same
 tbill_3m_28sep,4.28,pct,"FRED DGS3MO 28 Sep 2026"
 q3_eps_high,0.66,usd,"Nasdaq quarterly forecast, Oct 2026 quarter high estimate"
+net_sales_fy25,674.538,usd_bn,"SEC XBRL companyfacts, FY to 31 Jan 2025"
+cost_of_sales_fy25,511.753,usd_bn,CostOfRevenue
