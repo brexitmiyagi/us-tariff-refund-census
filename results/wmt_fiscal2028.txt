@@ -80,3 +80,18 @@
 12. CROSS-CHECKS
    truckload PPI y/y +13.9%; J.B. Hunt fuel surcharge revenue +82%
    Nov 20 105 straddle $9.30 = 8.9%; EV/EBITDA 20.3x, ex refund 21.7x
+
+13. BOTTOM-UP CROSS-CHECK (mix +0.08% a year, FY25 24.13% -> FY26 24.21%)
+   SG&A leverage needed to hit the FY27 guide: 0.85bn (0.11% of sales), held for FY28-FY29
+   FY27E: GM 24.31%, SG&A 20.83% -> OI 33.26 vs top-down 33.26 (+0.00)
+   FY28E: GM 24.14%, SG&A 20.83% -> OI 33.69 vs top-down 34.25 (-0.56)
+   FY29E: GM 24.27%, SG&A 20.80% -> OI 36.81 vs top-down 37.68 (-0.88)
+   bottom-up EPS FY28 $2.86, FY29 $3.17 (top-down $2.92, $3.25)
+   same gap applied to all cases: fair value $92.69, 12-month target $102.46
+
+14. 12-MONTH TARGET BY BASE-CASE UNDERLYING GROWTH (bear and bull unchanged)
+   6.0%: FY28 EPS 2.84, FY29 EPS 3.08; fair value $93.09; target $102.34 (-4.2%)
+   7.0%: FY28 EPS 2.87, FY29 EPS 3.15; fair value $93.61; target $103.46 (-3.1%)
+   8.5%: FY28 EPS 2.92, FY29 EPS 3.25; fair value $94.40; target $105.16 (-1.5%)
+   10.0%: FY28 EPS 2.96, FY29 EPS 3.35; fair value $95.18; target $106.88 (+0.1%)
+   11.0%: FY28 EPS 3.00, FY29 EPS 3.42; fair value $95.71; target $108.05 (+1.2%)
