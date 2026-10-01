@@ -29,3 +29,13 @@ opt_nov20_105p_mid,4.85,usd,"Nov 20 2026 105 put, bid 4.75 ask 4.95 at the 30 Se
 ev_30sep,888.1,usd_bn,"market cap 7.934bn x $103.92 + S&P net debt $63.56bn (StockAnalysis, 30 Sep)"
 cons_rev_fy27,752.85,usd_bn,"S&P Global via StockAnalysis forecast page, checked 1 Oct 2026"
 cons_rev_fy28,785.89,usd_bn,same
+erp_implied,4.09,pct,"Damodaran implied ERP on 1 Sep 2026, trailing 12-month cash yield basis (same basis as the 4.23% used before), Damodaran Online home page, checked 1 Oct 2026"
+cpi_core_goods_2026_04,167.767,index,"FRED CUSR0000SACL1E (CPI-U commodities less food and energy commodities, SA)"
+cpi_core_goods_2026_05,167.575,index,same
+cpi_core_goods_2026_06,167.431,index,same
+cpi_core_goods_2026_07,167.762,index,same
+cpi_core_goods_2026_08,167.939,index,same
+cpi_core_goods_2025_08,166.838,index,same
+wk52_high,135.155,usd,"Nasdaq summary, 52-week high (checked 1 Oct 2026)"
+wk52_low,98.88,usd,"Nasdaq summary, 52-week low"
+mcap_nasdaq,824.47,usd_bn,"Nasdaq summary market cap at the 30 Sep close"
