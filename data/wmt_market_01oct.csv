@@ -39,3 +39,9 @@ cpi_core_goods_2025_08,166.838,index,same
 wk52_high,135.155,usd,"Nasdaq summary, 52-week high (checked 1 Oct 2026)"
 wk52_low,98.88,usd,"Nasdaq summary, 52-week low"
 mcap_nasdaq,824.47,usd_bn,"Nasdaq summary market cap at the 30 Sep close"
+ev_ebitda_cost,27.22,x,"S&P Global via StockAnalysis statistics, updated 1 Oct 2026 (30 Sep close)"
+ev_ebitda_amzn,16.67,x,same
+ev_ebitda_bj,12.38,x,same
+ev_ebitda_dg,11.32,x,same
+ev_ebitda_tgt,9.89,x,same
+ev_ebitda_kr,7.10,x,same
