@@ -1,0 +1,36 @@
+item,value,unit,source
+price,103.92,usd,"Nasdaq, WMT official close 30 Sep 2026 (loaded after wmt_market_29sep.csv, so it replaces the 29 Sep price; the CME strip stays at 29 Sep, the latest settlement CME had published)"
+tbill_3m_latest,4.25,pct,"US Treasury daily par yield curve, 3-month, 29 Sep 2026 (latest posted)"
+ust_10y,5.26,pct,"US Treasury daily par yield curve, 10-year, 29 Sep 2026 (latest posted)"
+beta_5y,0.59,x,"S&P Global via StockAnalysis statistics page, 5-year beta, 30 Sep 2026"
+erp_implied,4.23,pct,"Damodaran implied equity risk premium, 1 Jan 2026 (Musings on Markets, Data Update 2 for 2026)"
+us_sales_fy25,462.4,usd_bn,"Walmart Q4 FY26 release (8-K 19 Feb 2026), Walmart U.S. net sales FY25"
+us_sales_fy26,483.0,usd_bn,"same, FY26"
+us_adjoi_fy25,24.0,usd_bn,"same, Walmart U.S. adjusted operating income FY25"
+us_adjoi_fy26,25.2,usd_bn,"same, FY26 (+4.8%, change $1.1bn as reported)"
+us_adjoi_change_fy26,1.1,usd_bn,"same, reported change"
+us_comp_fy26,4.6,pct,"same, Walmart U.S. comp sales ex fuel FY26"
+us_comp_q2_fy27,2.6,pct,"Walmart Q2 FY27 release (8-K 20 Aug 2026): comp +2.6%, transactions +1.5%, ticket +1.1%, ~510bp from eCommerce"
+us_pharmacy_drag_q2,1.25,pct_pts,"same: 125bp comp headwind from pharmacy deflation (maximum fair price regulation, effective 1 Jan)"
+us_transactions_q2,1.5,pct,same
+us_ticket_q2,1.1,pct,same
+us_ecom_q2,24,pct,"same: Walmart U.S. eCommerce sales +24%"
+us_ads_q2,38,pct,"same: advertising +38%, Walmart Connect ex-VIZIO +43%"
+us_gp_rate_q2_bp,158,bp,"same: gross profit rate +158bp (tariff refunds and mix, less price investment and fuel)"
+us_opex_delever_q2_bp,72,bp,"same: operating expense deleveraged 72bp (claims, depreciation, associate healthcare)"
+us_sales_h1_growth,0.0398,share,"10-Q Q2 FY27 segment note: H1 Walmart U.S. net sales 242.358 vs 233.074"
+cons_rev_fy27,752.78,usd_bn,"S&P Global via StockAnalysis forecast page, total revenues FY Jan 2027, updated 29 Sep 2026"
+cons_rev_fy28,786.06,usd_bn,"same, FY Jan 2028"
+px_cost,910.34,usd,"Nasdaq close 30 Sep 2026"
+px_amzn,249.15,usd,same
+px_bj,92.01,usd,same
+px_tgt,156.63,usd,same
+px_dg,119.57,usd,same
+px_kr,58.64,usd,same
+eps_cons_cost,22.86,usd,"Nasdaq consensus, FY Aug 2027 (16 estimates), 30 Sep 2026"
+eps_cons_amzn,10.52,usd,"Nasdaq consensus, CY2027 (15)"
+eps_cons_bj,5.03,usd,"Nasdaq consensus, FY Jan 2028 (12)"
+eps_cons_tgt,9.40,usd,"Nasdaq consensus, FY Jan 2028 (16)"
+eps_cons_dg,8.40,usd,"Nasdaq consensus, FY Jan 2028 (14)"
+eps_cons_kr,5.56,usd,"Nasdaq consensus, FY Jan 2028 (10)"
+cons_fy28_check,3.22,usd,"Nasdaq consensus FY Jan 2028, 16 estimates, re-checked 30 Sep 2026 (range 3.10-3.56)"

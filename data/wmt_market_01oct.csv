@@ -1,0 +1,31 @@
+item,value,unit,source
+ulsd_fut_oct26,4.9569,usd_gal,"CME NY Harbor ULSD final settlement 30 Sep 2026 (Oct-26 contract expired 30 Sep); pulled 1 Oct 2026"
+ulsd_fut_nov26,4.6881,usd_gal,same
+ulsd_fut_dec26,4.5068,usd_gal,same
+ulsd_fut_jan27,4.3803,usd_gal,same
+ulsd_fut_feb27,4.2527,usd_gal,same
+ulsd_fut_mar27,4.1079,usd_gal,same
+ulsd_fut_apr27,3.9549,usd_gal,same
+ulsd_fut_may27,3.8151,usd_gal,same
+ulsd_fut_jun27,3.6905,usd_gal,same
+ulsd_fut_jul27,3.6134,usd_gal,same
+ulsd_fut_aug27,3.5530,usd_gal,same
+ulsd_fut_sep27,3.5077,usd_gal,same
+ulsd_fut_oct27,3.4660,usd_gal,same
+ulsd_fut_nov27,3.4103,usd_gal,same
+ulsd_fut_dec27,3.3372,usd_gal,same
+ulsd_fut_jan28,3.2602,usd_gal,same
+nyh_2026_09,4.9522,usd_gal,"FRED DDFUELNYH, September 2026 average of 20 daily observations to 29 Sep (pulled 1 Oct)"
+price,103.92,usd,"Nasdaq, WMT official close 30 Sep 2026 (latest close before 1 Oct open)"
+tbill_3m_latest,4.20,pct,"US Treasury daily par yield curve, 3-month, 30 Sep 2026"
+ust_10y,5.29,pct,"US Treasury daily par yield curve, 10-year, 30 Sep 2026"
+px_bj,92.00,usd,"Nasdaq official close 30 Sep 2026"
+px_tgt,156.69,usd,same
+px_dg,119.58,usd,same
+px_kr,58.62,usd,same
+opt_spot_30sep,103.92,usd,"Nasdaq option chain, as of 30 Sep 2026 close"
+opt_nov20_105c_mid,4.45,usd,"Nov 20 2026 105 call, bid 4.40 ask 4.50 at the 30 Sep close"
+opt_nov20_105p_mid,4.85,usd,"Nov 20 2026 105 put, bid 4.75 ask 4.95 at the 30 Sep close"
+ev_30sep,888.1,usd_bn,"market cap 7.934bn x $103.92 + S&P net debt $63.56bn (StockAnalysis, 30 Sep)"
+cons_rev_fy27,752.85,usd_bn,"S&P Global via StockAnalysis forecast page, checked 1 Oct 2026"
+cons_rev_fy28,785.89,usd_bn,same
