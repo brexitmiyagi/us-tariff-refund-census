@@ -5,19 +5,19 @@
    2022 Q1 (US) 0.92, 2026 Q1 0.71, FY27 guide 1.39 (floor); low 0.71 mid 1.01 high 1.39
    own fleet: 1bn miles / 6.7 mpg = 0.15 (11% to 21% of the range)
 
-3. FUTURES (CME NY Harbor ULSD, 29 Sep 2026)
-   FY27 average 4.075 vs 3.937 assumed -> extra fuel 0.14bn; FY28 strip 3.625 (+1.123 vs Feb), by quarter 4.01, 3.66, 3.50, 3.33
+3. FUTURES (CME NY Harbor ULSD, latest settlement in the data files: 30 Sep 2026)
+   FY27 average 4.122 vs 3.937 assumed -> extra fuel 0.19bn; FY28 strip 3.664 (+1.163 vs Feb), by quarter 4.11, 3.71, 3.51, 3.34
 
 4. INTEREST ON NEW DEBT: 4.5% on the base-case debt increase -> +0.13bn FY28, +0.22bn FY29
 
 5. WHAT $3.22 NEEDS
-   OI needed 37.43bn: on FY27 reported 33.26 +12.5%; ex-refund 30.36 +23.3%; on Feb plan +12.9%
-   Feb plan: strip no rollbacks +16.3%; strip half kept +18.1%
+   OI needed 37.43bn: on FY27 reported 33.22 +12.7%; ex-refund 30.32 +23.5%; on Feb plan +12.9%
+   Feb plan: strip no rollbacks +16.4%; strip half kept +18.2%
    by FY27 underlying growth (share of the extra residual that is price: all / half / none), futures diesel, half the price investment kept:
-   7%: base 33.17, residual 0.61; Feb diesel/none +12.9%; strip/none +16.3%; strip/half kept: +18.1% / +18.1% / +18.1%
-   8%: base 33.48, residual 0.92; Feb diesel/none +11.8%; strip/none +15.2%; strip/half kept: +17.9% / +17.5% / +17.0%
-   9%: base 33.79, residual 1.23; Feb diesel/none +10.8%; strip/none +14.1%; strip/half kept: +17.8% / +16.9% / +15.9%
-   10%: base 34.10, residual 1.54; Feb diesel/none +9.8%; strip/none +13.1%; strip/half kept: +17.6% / +16.2% / +14.9%
+   7%: base 33.17, residual 0.61; Feb diesel/none +12.9%; strip/none +16.4%; strip/half kept: +18.2% / +18.2% / +18.2%
+   8%: base 33.48, residual 0.92; Feb diesel/none +11.8%; strip/none +15.3%; strip/half kept: +18.1% / +17.6% / +17.1%
+   9%: base 33.79, residual 1.23; Feb diesel/none +10.8%; strip/none +14.3%; strip/half kept: +17.9% / +17.0% / +16.1%
+   10%: base 34.10, residual 1.54; Feb diesel/none +9.8%; strip/none +13.2%; strip/half kept: +17.7% / +16.4% / +15.0%
    share count -0.5%: need 37.43bn, +12.8% on the Feb plan
    share count -1.2%: need 37.19bn, +12.1% on the Feb plan
 
@@ -25,73 +25,106 @@
 
 7. GROSS MARGIN BRIDGE (% of net sales)
    FY26 24.21%
-   FY27E: mix +0.15%, refund +0.39%, fuel -0.29%, price -0.08% -> 24.38%; SG&A 20.90% of net sales
+   FY27E: mix +0.15%, refund +0.39%, fuel -0.30%, price -0.08% -> 24.37%; SG&A 20.90% of net sales
    FY28E: mix +0.30%, refund +0.00%, fuel -0.15%, price -0.08% -> 24.28%; SG&A 20.90% of net sales
    FY29E: mix +0.45%, refund +0.00%, fuel -0.10%, price -0.08% -> 24.49%; SG&A 20.91% of net sales
 
 8. THREE-STATEMENT SUMMARY ($bn)          FY26A     FY27E     FY28E     FY29E
    Net sales                             706.41    738.20    767.73    798.44
-   Gross profit                          171.02    179.98    186.43    195.52
-   Gross margin, %                        24.21     24.38     24.28     24.49
+   Gross profit                          171.02    179.93    186.39    195.52
+   Gross margin, %                        24.21     24.37     24.28     24.49
    Membership and other income             6.75      7.56      8.32      9.15
    SG&A (adjusted)                       146.77    154.27    160.49    166.99
    SG&A, % of net sales                   20.78     20.90     20.90     20.91
-   Adjusted operating income              31.00     33.26     34.25     37.68
+   Adjusted operating income              31.00     33.22     34.21     37.68
    Interest, net                           2.43      2.68      2.81      2.90
-   Pretax (adjusted)                      28.57     30.58     31.44     34.79
-   Tax at 24.5%                            7.00      7.49      7.70      8.52
+   Pretax (adjusted)                      28.57     30.53     31.40     34.78
+   Tax at 24.5%                            7.00      7.48      7.69      8.52
    Noncontrolling interest                 0.39      0.58      0.58      0.58
-   Net income to Walmart (adjusted)       21.18     22.51     23.16     25.69
+   Net income to Walmart (adjusted)       21.18     22.48     23.13     25.68
    Diluted shares (bn)                     8.02      7.98      7.94      7.90
-   Adjusted EPS ($)                        2.64      2.82      2.92      3.25
+   Adjusted EPS ($)                        2.64      2.82      2.91      3.25
    Consensus EPS ($)                        nan      2.87      3.22      3.53
    D&A                                    14.20     16.05     17.61     19.02
-   Operating cash flow                    41.56     44.64     46.85     50.79
+   Operating cash flow                    41.56     44.64     46.86     50.82
    Capital expenditure                    26.64     29.53     30.71     31.94
-   Free cash flow                         14.92     15.11     16.14     18.85
+   Free cash flow                         14.92     15.11     16.15     18.88
    Dividends                               7.51      7.90      8.25      8.63
    Buybacks                                8.09     10.00     10.00     10.00
    Cash                                   10.73     10.73     10.73     10.73
    Property and equipment, net           136.08    149.56    162.66    175.58
-   Total debt incl. finance leases        51.52     54.31     56.42     56.20
-   Walmart shareholders' equity           99.62    104.23    109.14    116.20
+   Total debt incl. finance leases        51.52     54.31     56.41     56.16
+   Walmart shareholders' equity           99.62    104.20    109.07    116.13
    Net debt / EBITDA (x)                   0.90      0.88      0.88      0.80
 
 9. QUARTERLY ADJUSTED EPS
-   Q3 FY27 0.619 (cons 0.63); Q4 FY27 0.733 (guide-implied 0.735; cons 0.78)
-   Q1 FY28 0.659 (cons 0.73)
-   Q2 FY28 0.749 (cons 0.84)
+   Q3 FY27 0.619 (cons 0.63); Q4 FY27 0.728 (guide-implied 0.735; cons 0.78)
+   Q1 FY28 0.657 (cons 0.73)
+   Q2 FY28 0.748 (cons 0.84)
    Q3 FY28 0.683 (cons 0.78)
    Q4 FY28 0.826 (cons 0.87 implied)
-   FY28 sum 2.917 vs annual 2.917
+   FY28 sum 2.913 vs annual 2.913
 
-10. VALUE (multiples: bear 24.7x, base 33.2x, bull 38.1x)
-   Bear 25%: FY28 EPS 2.690 -> $66.33; FY29 EPS 2.931 -> $72.28
-   Base 50%: FY28 EPS 2.917 -> $96.75; FY29 EPS 3.250 -> $107.81
-   Bull 25%: FY28 EPS 3.089 -> $117.76; FY29 EPS 3.482 -> $132.75
-   fair value today $94.40 (-11.6%); 12-month target $105.16 (-1.5%, total return -0.6%; 3m bill 4.28%)
-   bear multiple 30.0x: fair value $97.99, target $109.08
-   bear multiple 33.2x: fair value $100.12, target $111.40
-   fuel low: fair value $95.54, target $106.13
-   fuel high: fair value $92.92, target $103.90
+10. VALUE (multiples: bear 24.7x, base 32.3x, bull 38.1x)
+   Bear 25%: FY28 EPS 2.684 -> $66.19; FY29 EPS 2.926 -> $72.14
+   Base 50%: FY28 EPS 2.913 -> $94.02; FY29 EPS 3.250 -> $104.88
+   Bull 25%: FY28 EPS 3.089 -> $117.74; FY29 EPS 3.482 -> $132.72
+   fair value today $92.99 (-10.5%); 12-month target $103.66 (-0.3%, total return +0.7%; 3m bill 4.2%)
+   bear multiple 30.0x: fair value $96.58, target $107.56
+   bear multiple 32.3x: fair value $98.10, target $109.23
+   fuel low: fair value $94.15, target $104.64
+   fuel high: fair value $91.50, target $102.39
 
-11. OWNER EARNINGS 27.8bn (3.3% of $847bn); price needs 7.9% a year; my FY26-FY29 EPS growth 7.2% a year -> $100.59 a share
+11. OWNER EARNINGS 27.8bn (3.4% of $825bn); price needs 7.6% a year; my FY26-FY29 EPS growth 7.2% a year -> $100.54 a share
 
 12. CROSS-CHECKS
    truckload PPI y/y +13.9%; J.B. Hunt fuel surcharge revenue +82%
-   Nov 20 105 straddle $9.30 = 8.9%; EV/EBITDA 20.3x, ex refund 21.7x
+   Nov 20 105 straddle $9.30 = 8.9%; EV/EBITDA 20.2x, ex refund 21.6x
 
 13. BOTTOM-UP CROSS-CHECK (mix +0.08% a year, FY25 24.13% -> FY26 24.21%)
    SG&A leverage needed to hit the FY27 guide: 0.85bn (0.11% of sales), held for FY28-FY29
-   FY27E: GM 24.31%, SG&A 20.83% -> OI 33.26 vs top-down 33.26 (+0.00)
-   FY28E: GM 24.14%, SG&A 20.83% -> OI 33.69 vs top-down 34.25 (-0.56)
-   FY29E: GM 24.27%, SG&A 20.80% -> OI 36.81 vs top-down 37.68 (-0.88)
-   bottom-up EPS FY28 $2.86, FY29 $3.17 (top-down $2.92, $3.25)
-   same gap applied to all cases: fair value $92.69, 12-month target $102.46
+   FY27E: GM 24.30%, SG&A 20.83% -> OI 33.22 vs top-down 33.22 (-0.00)
+   FY28E: GM 24.13%, SG&A 20.83% -> OI 33.65 vs top-down 34.21 (-0.56)
+   FY29E: GM 24.27%, SG&A 20.80% -> OI 36.80 vs top-down 37.68 (-0.88)
+   bottom-up EPS FY28 $2.86, FY29 $3.17 (top-down $2.91, $3.25)
+   same gap applied to all cases: fair value $91.31, 12-month target $100.99
 
 14. 12-MONTH TARGET BY BASE-CASE UNDERLYING GROWTH (bear and bull unchanged)
-   6.0%: FY28 EPS 2.84, FY29 EPS 3.08; fair value $93.09; target $102.34 (-4.2%)
-   7.0%: FY28 EPS 2.87, FY29 EPS 3.15; fair value $93.61; target $103.46 (-3.1%)
-   8.5%: FY28 EPS 2.92, FY29 EPS 3.25; fair value $94.40; target $105.16 (-1.5%)
-   10.0%: FY28 EPS 2.96, FY29 EPS 3.35; fair value $95.18; target $106.88 (+0.1%)
-   11.0%: FY28 EPS 3.00, FY29 EPS 3.42; fair value $95.71; target $108.05 (+1.2%)
+   6.0%: FY28 EPS 2.83, FY29 EPS 3.08; fair value $91.72; target $100.91 (-2.9%)
+   7.0%: FY28 EPS 2.87, FY29 EPS 3.15; fair value $92.23; target $102.00 (-1.8%)
+   8.5%: FY28 EPS 2.91, FY29 EPS 3.25; fair value $92.99; target $103.66 (-0.3%)
+   10.0%: FY28 EPS 2.96, FY29 EPS 3.35; fair value $93.76; target $105.33 (+1.4%)
+   11.0%: FY28 EPS 2.99, FY29 EPS 3.42; fair value $94.26; target $106.46 (+2.4%)
+
+15. HURDLE BY FUEL SENSITIVITY (OI growth on the Feb plan; range across FY27 underlying 7%-10% and leftover split)
+   low 0.71bn per $1: on the Feb plan +17.2%; range +14.0% to +17.2%
+   mid 1.01bn per $1: on the Feb plan +18.2%; range +15.0% to +18.2%
+   high 1.39bn per $1: on the Feb plan +19.6%; range +16.3% to +19.6%
+
+16. WALMART U.S. BUILD (sales +4% in FY28, the H1 FY27 pace; comp Q2 +2.6% = transactions +1.5%, ticket +1.1%, pharmacy drag 125bp)
+   FY26: sales 462.4 -> 483.0 (+4.5%), adj OI +1.1bn -> incremental margin 5.3%; average margin 5.22%
+   my base (8.5% on the plan): total +8.5% -> Walmart U.S. OI +8.2% (26.96 -> 29.17); incremental margin 11.0% on +20.1bn of sales
+   consensus, Feb diesel, no rollbacks: total +12.9% -> Walmart U.S. OI +13.5% (26.96 -> 30.61); incremental margin 18.2% on +20.1bn of sales
+   consensus, futures diesel, half kept: total +18.2% -> Walmart U.S. OI +20.1% (26.96 -> 32.39); incremental margin 27.0% on +20.1bn of sales
+
+17. COST OF EQUITY: 10-year 5.29% + beta 0.59 x implied ERP 4.23% = 7.79%
+   owner earnings 27.8bn = operating cash flow less depreciation (depreciation as a proxy for maintenance capex); ten years at my FY26-FY29 growth 7.2%, then 3%
+   at 7.00%: value $127.17 a share; the price needs 4.7% a year
+   at 7.79%: value $105.30 a share; the price needs 7.0% a year
+   at 8.00%: value $100.54 a share; the price needs 7.6% a year
+   at 9.00%: value $82.84 a share; the price needs 10.1% a year
+
+18. FORWARD P/E, 30 Sep 2026 close / next fiscal year consensus (Nasdaq)
+   WMT 32.3x on consensus, 35.7x on mine
+   COST 39.8x
+   AMZN 23.7x
+   BJ 18.3x
+   TGT 16.7x
+   DG 14.2x
+   KR 10.5x
+   EV/EBITDA (S&P via StockAnalysis): WMT 20.2x; COST 27.51x, AMZN 16.75x, BJ 12.32x, DG 11.31x, TGT 9.87x, KR 7.19x
+
+19. CONSENSUS BY LINE (S&P via StockAnalysis revenue; Nasdaq EPS)
+   revenue FY27 mine 745.8 vs 752.9 (-0.9%); FY28 mine 776.0 vs 785.9 (-1.3%)
+   EPS FY28 mine 2.91 vs 3.22: gap 0.31, of which sales 0.04 at my 4.41% margin and margin 0.27
+   retail diesel (EIA, FRED GASDESW) Feb 2026 3.72 -> Sep 6.29 (+2.57); NY Harbor 2.50 -> 4.95 (+2.45); spread 1.22 -> 1.34
