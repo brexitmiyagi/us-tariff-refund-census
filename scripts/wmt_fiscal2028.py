@@ -170,21 +170,29 @@ gm_ = sorted(v[f"guide_px_fy{y}"] / v[f"guide_eps_fy{y}"] for y in (23, 24, 25, 
 def pct(a, p):
     k = (len(a) - 1) * p; f = int(k); c = min(f + 1, len(a) - 1); return a[f] + (a[c] - a[f]) * (k - f)
 m_bear, m_bull, pe_now = pct(gm_, .25), pct(gm_, .75), v["price"] / v["consensus_fy28"]
-cases = [("Bear", .25, .07, fut("oct26"), fut("oct26"), 1.0, m_bear), ("Base", .50, .085, fy28, fut("jan28"), .5, pe_now), ("Bull", .25, .11, fut("jan28"), fut("jan28"), 0.0, m_bull)]
-def value(which, mb=m_bear, wts=(.25, .5, .25), s=s_mid):
+# base multiple: the mean of the five guidance-day P/Es, so the value does not move with today's price (v14 change);
+# today's multiple and the median are shown as sensitivities
+m_base, m_med = st.mean(gm_), st.median(gm_)
+cases = [("Bear", .25, .07, fut("oct26"), fut("oct26"), 1.0, m_bear), ("Base", .50, .085, fy28, fut("jan28"), .5, m_base), ("Bull", .25, .11, fut("jan28"), fut("jan28"), 0.0, m_bull)]
+def value(which, mb=m_bear, wts=(.25, .5, .25), s=s_mid, mbase=None, gbase=None, dshift=0.0):
     tot = 0
     for (n, w, g, d28, d29, k, m), ww in zip(cases, wts):
         m = mb if n == "Bear" else m
+        if n == "Base":
+            m = m_base if mbase is None else mbase
+            g = g if gbase is None else gbase
+            d28, d29 = d28 + dshift, d29 + dshift
         e = eps28(oi28(g, d28, k, s)) if which == 28 else eps29(oi29(g, d29, k, s))
         tot += ww * e * m
     return tot
-P(f"\n10. VALUE (multiples: bear {m_bear:.1f}x, base {pe_now:.1f}x, bull {m_bull:.1f}x)")
+P(f"\n10. VALUE (multiples: bear {m_bear:.1f}x, base {m_base:.1f}x = mean of the five guidance-day P/Es {[round(x,1) for x in gm_]}, bull {m_bull:.1f}x)")
 for n, w, g, d28, d29, k, m in cases:
     e8, e9 = eps28(oi28(g, d28, k)), eps29(oi29(g, d29, k))
     P(f"   {n} {w:.0%}: FY28 EPS {e8:.3f} -> ${e8*m:.2f}; FY29 EPS {e9:.3f} -> ${e9*m:.2f}")
 fv, tg = value(28), value(29)
 P(f"   fair value today ${fv:.2f} ({fv/v['price']-1:+.1%}); 12-month target ${tg:.2f} ({tg/v['price']-1:+.1%}, total return {(tg+v['dividend_annual'])/v['price']-1:+.1%}; 3m bill {v['tbill_3m_latest']}%)")
-for mb in (30.0, pe_now): P(f"   bear multiple {mb:.1f}x: fair value ${value(28, mb=mb):.2f}, target ${value(29, mb=mb):.2f}")
+for mb in (30.0, m_base): P(f"   bear multiple {mb:.1f}x: fair value ${value(28, mb=mb):.2f}, target ${value(29, mb=mb):.2f}")
+for lab, mx in (("today's multiple", pe_now), ("median guidance-day", m_med)): P(f"   base at {lab} {mx:.1f}x: fair value ${value(28, mbase=mx):.2f}, target ${value(29, mbase=mx):.2f}")
 for lab, s in (("low", s_low), ("high", s_high)): P(f"   fuel {lab}: fair value ${value(28, s=s):.2f}, target ${value(29, s=s):.2f}")
 
 # 11. owner-earnings cross-check
@@ -232,7 +240,7 @@ for i, y in ((1, "FY27E"), (2, "FY28E"), (3, "FY29E")):
     P(f"   {y}: GM {gmb[i]:.2%}, SG&A {sgab[i]/nsales[i]:.2%} -> OI {oib[i]:.2f} vs top-down {S['oi'][i]:.2f} ({oib[i]-S['oi'][i]:+.2f})")
 P(f"   bottom-up EPS FY28 ${eb28:.2f}, FY29 ${eb29:.2f} (top-down ${S['eps'][2]:.2f}, ${S['eps'][3]:.2f})")
 cases_b = [(.25, eps28(oi28(.07, fut('oct26'), 1.0)) + (eb28 - S['eps'][2]), eps29(oi29(.07, fut('oct26'), 1.0)) + (eb29 - S['eps'][3]), m_bear),
-           (.50, eb28, eb29, pe_now),
+           (.50, eb28, eb29, m_base),
            (.25, eps28(oi28(.11, fut('jan28'), 0.0)) + (eb28 - S['eps'][2]), eps29(oi29(.11, fut('jan28'), 0.0)) + (eb29 - S['eps'][3]), m_bull)]
 P(f"   same gap applied to all cases: fair value ${sum(w*e8*m for w,e8,e9,m in cases_b):.2f}, 12-month target ${sum(w*e9*m for w,e8,e9,m in cases_b):.2f}")
 
@@ -240,8 +248,7 @@ P(f"   same gap applied to all cases: fair value ${sum(w*e8*m for w,e8,e9,m in c
 P("\n14. 12-MONTH TARGET BY BASE-CASE UNDERLYING GROWTH (bear and bull unchanged)")
 for gb in (0.06, 0.07, 0.085, 0.10, 0.11):
     e8 = eps28(oi28(gb, fy28, .5)); e9 = eps29(oi29(gb, fut("jan28"), .5))
-    t = .25 * eps29(oi29(.07, fut("oct26"), 1.0)) * m_bear + .5 * e9 * pe_now + .25 * eps29(oi29(.11, fut("jan28"), 0.0)) * m_bull
-    f = .25 * eps28(oi28(.07, fut("oct26"), 1.0)) * m_bear + .5 * e8 * pe_now + .25 * eps28(oi28(.11, fut("jan28"), 0.0)) * m_bull
+    t = value(29, gbase=gb); f = value(28, gbase=gb)
     P(f"   {gb:.1%}: FY28 EPS {e8:.2f}, FY29 EPS {e9:.2f}; fair value ${f:.2f}; target ${t:.2f} ({t/v['price']-1:+.1%})")
 
 # 15. the growth hurdle at each fuel sensitivity (Feb plan, futures diesel, half the price investment kept)
@@ -298,3 +305,38 @@ m28_ = S["oi"][2] / rev[2]
 sales_cents = (v["cons_rev_fy28"] - rev[2]) * m28_ * (1 - tax) / sh28
 P(f"   EPS FY28 mine {S['eps'][2]:.2f} vs {v['consensus_fy28']:.2f}: gap {v['consensus_fy28']-S['eps'][2]:.2f}, of which sales {sales_cents:.2f} at my {m28_:.2%} margin and margin {v['consensus_fy28']-S['eps'][2]-sales_cents:.2f}")
 P(f"   retail diesel (EIA, FRED GASDESW) Feb 2026 {v['diesel_2026_02']:.2f} -> Sep {v['diesel_2026_09']:.2f} ({v['diesel_2026_09']-v['diesel_2026_02']:+.2f}); NY Harbor {feb26:.2f} -> {v['nyh_2026_09']:.2f} ({v['nyh_2026_09']-feb26:+.2f}); spread {v['diesel_2026_02']-feb26:.2f} -> {v['diesel_2026_09']-v['nyh_2026_09']:.2f}")
+
+# 20. Walmart U.S. ask if International and Sam's keep their first-half pace
+g_int = v["h1_oi_intl_fy27"] / v["h1_oi_intl_fy26"] - 1; g_sams = v["h1_oi_sams_fy27"] / v["h1_oi_sams_fy26"] - 1
+P(f"\n20. WALMART U.S. ASK IF INTERNATIONAL (+{g_int:.1%}) AND SAM'S (+{g_sams:.1%}) KEEP THEIR H1 FY27 OI PACE (refund effects included)")
+pl = {k: x * 1.07 for k, x in seg26.items()}; pc = corp26 * 1.07
+for lab, g in (("my base", 0.085), ("consensus, Feb diesel, no rollbacks", need / plan - 1),
+               ("consensus, futures diesel, half kept", (need + s_mid * (fy28 - feb26) + roll / 2) / plan - 1)):
+    us28 = plan * (1 + g) - pl["intl"] * (1 + g_int) - pl["sams"] * (1 + g_sams) - pc * 1.04
+    P(f"   {lab}: Walmart U.S. OI {us28/pl['us']-1:+.1%}; incremental margin {(us28-pl['us'])/(us_sales28-us_sales27):.1%}")
+
+# 21. two-way table: 12-month target by base-case underlying growth and a parallel shift in the diesel strip
+P("\n21. 12-MONTH TARGET: base-case underlying growth (rows) x parallel shift in the FY28-FY29 diesel strip (columns); bear and bull unchanged")
+shifts = (-1.0, -0.5, 0.0, 0.5, 1.0)
+P("   growth  " + "  ".join(f"{d:+.2f}" for d in shifts))
+grid = []
+for gb in (0.06, 0.07, 0.085, 0.10, 0.11):
+    row = [value(29, gbase=gb, dshift=d) for d in shifts]; grid.append((gb, row))
+    P(f"   {gb:5.1%}  " + "  ".join(f"{x:6.2f}" for x in row))
+
+# 22. segment bridge, $bn: FY26 actual -> FY27 February plan -> FY28 underlying -> less fuel and price -> FY28 operating income
+P("\n22. SEGMENT BRIDGE ($bn adjusted operating income)")
+u28 = {"us": us_growth(0.085)[2], "intl": pl["intl"] * 1.09, "sams": pl["sams"] * 1.06}
+c28 = pc * 1.04
+for k, lab in (("us", "Walmart U.S."), ("intl", "International"), ("sams", "Sam's Club")):
+    P(f"   {lab:<14} FY26A {seg26[k]:6.2f}  FY27 plan {pl[k]:6.2f}  FY28 underlying {u28[k]:6.2f} ({u28[k]/pl[k]-1:+.1%})")
+P(f"   {'Corporate':<14} FY26A {corp26:6.2f}  FY27 plan {pc:6.2f}  FY28 underlying {c28:6.2f}")
+tot28 = sum(u28.values()) + c28
+P(f"   Total          FY26A {base:6.2f}  FY27 plan {plan:6.2f}  FY28 underlying {tot28:6.2f}; less fuel {s_mid*(fy28-feb26):.2f}, less half the price investment {roll/2:.2f} -> {tot28 - s_mid*(fy28-feb26) - roll/2:.2f} (model {S['oi'][2]:.2f})")
+
+# 23. outside check on the rollbacks: CPI core goods (commodities less food and energy commodities, SA)
+P("\n23. CPI CORE GOODS (SA, m/m): " + ", ".join(f"{m}: {v[f'cpi_core_goods_2026_{i:02d}']/v[f'cpi_core_goods_2026_{i-1:02d}']-1:+.2%}" for i, m in ((5, 'May'), (6, 'Jun'), (7, 'Jul'), (8, 'Aug'))) + f"; Aug y/y {v['cpi_core_goods_2026_08']/v['cpi_core_goods_2025_08']-1:+.2%}. September prints 14 Oct 2026.")
+
+# 24. key data
+P(f"\n24. KEY DATA: price ${v['price']:.2f} (30 Sep close); 52-week ${v['wk52_low']:.2f}-${v['wk52_high']:.2f}; market cap ${v['mcap_nasdaq']:.0f}bn; EV ${v['ev_30sep']:.0f}bn; dividend ${v['dividend_annual']:.2f} ({v['dividend_annual']/v['price']:.2%})")
+P(f"   EPS mine / consensus: FY27 {S['eps'][1]:.2f}/{v['cons_fy27']:.2f}, FY28 {S['eps'][2]:.2f}/{v['consensus_fy28']:.2f}, FY29 {S['eps'][3]:.2f}/{v['cons_fy29']:.2f}; P/E on mine {v['price']/S['eps'][2]:.1f}x FY28, {v['price']/S['eps'][3]:.1f}x FY29")
