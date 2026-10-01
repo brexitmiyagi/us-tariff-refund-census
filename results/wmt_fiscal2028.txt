@@ -124,7 +124,7 @@
    TGT 16.7x
    DG 14.2x
    KR 10.5x
-   EV/EBITDA (S&P via StockAnalysis): WMT 20.2x; COST 27.51x, AMZN 16.75x, BJ 12.32x, DG 11.31x, TGT 9.87x, KR 7.19x
+   EV/EBITDA (S&P via StockAnalysis): WMT 20.2x; COST 27.22x, AMZN 16.67x, BJ 12.38x, DG 11.32x, TGT 9.89x, KR 7.1x
 
 19. CONSENSUS BY LINE (S&P via StockAnalysis revenue; Nasdaq EPS)
    revenue FY27 mine 745.8 vs 752.9 (-0.9%); FY28 mine 776.0 vs 785.9 (-1.3%)
