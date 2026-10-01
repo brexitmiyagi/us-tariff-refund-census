@@ -2,8 +2,9 @@
 a three-statement and quarterly model, and a fair value and 12-month target.
 
 Inputs (all in data/): wmt_fuel_peers.csv, wmt_futures_cashflow.csv, wmt_history_segments_freight.csv,
-wmt_market_29sep.csv (price and CME strip of 29 Sep 2026, loaded last so it wins), wmt_fy26_statements.csv,
-wmt_quarterly_peers.csv. Growth rates, weights, the mix gain and the cost of new debt are my calls. Section 8 presents the top-down
+wmt_market_29sep.csv (CME strip of 29 Sep 2026), wmt_market_30sep.csv (30 Sep close, rates, peers, segment
+and consensus lines), wmt_market_01oct.csv (CME strip and Treasury curve of 30 Sep, pulled 1 Oct; loaded last so it wins),
+wmt_fy26_statements.csv, wmt_quarterly_peers.csv. Growth rates, weights, the mix gain and the cost of new debt are my calls. Section 8 presents the top-down
 forecast as an income statement; section 13 rebuilds it bottom-up from gross margin and SG&A as a check.
 """
 import csv, os, statistics as st
@@ -11,7 +12,7 @@ HERE = os.path.dirname(os.path.abspath(__file__)); D = os.path.join(HERE, "..", 
 def load(n): return {r["item"]: float(r["value"]) for r in csv.DictReader(open(os.path.join(D, n)))}
 v = {}
 for n in ("wmt_fuel_peers.csv", "wmt_futures_cashflow.csv", "wmt_history_segments_freight.csv",
-          "wmt_market_29sep.csv", "wmt_fy26_statements.csv", "wmt_quarterly_peers.csv"):
+          "wmt_market_29sep.csv", "wmt_fy26_statements.csv", "wmt_quarterly_peers.csv", "wmt_market_30sep.csv", "wmt_market_01oct.csv"):
     v.update(load(n))
 P = print
 tax, sh27 = v["tax"], v["diluted_shares"]
@@ -45,7 +46,7 @@ extra27 = (now27 - assumed27) * s_mid
 m28 = ["feb27", "mar27", "apr27", "may27", "jun27", "jul27", "aug27", "sep27", "oct27", "nov27", "dec27", "jan28"]
 fy28 = st.mean([fut(m) for m in m28])
 q28 = [st.mean([fut(m) for m in m28[i*3:i*3+3]]) for i in range(4)]
-P("\n3. FUTURES (CME NY Harbor ULSD, 29 Sep 2026)")
+P("\n3. FUTURES (CME NY Harbor ULSD, latest settlement in the data files: 30 Sep 2026)")
 P(f"   FY27 average {now27:.3f} vs {assumed27:.3f} assumed -> extra fuel {extra27:.2f}bn; FY28 strip {fy28:.3f} ({fy28-feb26:+.3f} vs Feb), by quarter " + ", ".join(f"{x:.2f}" for x in q28))
 # quarter split of FY27's extra fuel: September (actual) and October fall in Q3, Nov-Jan in Q4
 x_sep, x_oct = v["nyh_2026_09"] - v["nyh_2026_08"], fut("oct26") - v["nyh_2026_08"]
@@ -182,7 +183,7 @@ for n, w, g, d28, d29, k, m in cases:
     e8, e9 = eps28(oi28(g, d28, k)), eps29(oi29(g, d29, k))
     P(f"   {n} {w:.0%}: FY28 EPS {e8:.3f} -> ${e8*m:.2f}; FY29 EPS {e9:.3f} -> ${e9*m:.2f}")
 fv, tg = value(28), value(29)
-P(f"   fair value today ${fv:.2f} ({fv/v['price']-1:+.1%}); 12-month target ${tg:.2f} ({tg/v['price']-1:+.1%}, total return {(tg+v['dividend_annual'])/v['price']-1:+.1%}; 3m bill {v['tbill_3m_28sep']}%)")
+P(f"   fair value today ${fv:.2f} ({fv/v['price']-1:+.1%}); 12-month target ${tg:.2f} ({tg/v['price']-1:+.1%}, total return {(tg+v['dividend_annual'])/v['price']-1:+.1%}; 3m bill {v['tbill_3m_latest']}%)")
 for mb in (30.0, pe_now): P(f"   bear multiple {mb:.1f}x: fair value ${value(28, mb=mb):.2f}, target ${value(29, mb=mb):.2f}")
 for lab, s in (("low", s_low), ("high", s_high)): P(f"   fuel {lab}: fair value ${value(28, s=s):.2f}, target ${value(29, s=s):.2f}")
 
@@ -242,3 +243,58 @@ for gb in (0.06, 0.07, 0.085, 0.10, 0.11):
     t = .25 * eps29(oi29(.07, fut("oct26"), 1.0)) * m_bear + .5 * e9 * pe_now + .25 * eps29(oi29(.11, fut("jan28"), 0.0)) * m_bull
     f = .25 * eps28(oi28(.07, fut("oct26"), 1.0)) * m_bear + .5 * e8 * pe_now + .25 * eps28(oi28(.11, fut("jan28"), 0.0)) * m_bull
     P(f"   {gb:.1%}: FY28 EPS {e8:.2f}, FY29 EPS {e9:.2f}; fair value ${f:.2f}; target ${t:.2f} ({t/v['price']-1:+.1%})")
+
+# 15. the growth hurdle at each fuel sensitivity (Feb plan, futures diesel, half the price investment kept)
+P("\n15. HURDLE BY FUEL SENSITIVITY (OI growth on the Feb plan; range across FY27 underlying 7%-10% and leftover split)")
+for lab, s_ in (("low", s_low), ("mid", s_mid), ("high", s_high)):
+    vals = []
+    for u in (0.07, 0.08, 0.09, 0.10):
+        b = base * (1 + u); extra = b - plan
+        for share in (1.0, 0.5, 0.0):
+            vals.append((need + s_ * (fy28 - feb26) + resid + share * extra) / b - 1)
+    plan_h = (need + s_ * (fy28 - feb26) + roll / 2) / plan - 1
+    P(f"   {lab} {s_:.2f}bn per $1: on the Feb plan {plan_h:+.1%}; range {min(vals):+.1%} to {max(vals):+.1%}")
+
+# 16. Walmart U.S. build: what 7.3%-style growth means in sales and incremental margin
+seg26 = {"us": v["fy26_adjoi_us"], "intl": v["fy26_adjoi_intl_cc"], "sams": v["fy26_adjoi_sams"]}
+corp26 = base - sum(seg26.values())
+def us_growth(total_growth):
+    # every line on the Feb plan (FY26 x 1.07); International +9%, Sam's +6%, corporate grows with sales (+4%)
+    pl = {k: x * 1.07 for k, x in seg26.items()}; pc = corp26 * 1.07
+    tgt = plan * (1 + total_growth)
+    us28 = tgt - pl["intl"] * 1.09 - pl["sams"] * 1.06 - pc * 1.04
+    return us28 / pl["us"] - 1, pl["us"], us28
+us_sales27 = v["us_sales_fy26"] * (1 + v["us_sales_h1_growth"]); us_sales28 = us_sales27 * 1.04
+inc26 = v["us_adjoi_change_fy26"] / (v["us_sales_fy26"] - v["us_sales_fy25"])
+P("\n16. WALMART U.S. BUILD (sales +4% in FY28, the H1 FY27 pace; comp Q2 +2.6% = transactions +1.5%, ticket +1.1%, pharmacy drag 125bp)")
+P(f"   FY26: sales {v['us_sales_fy25']:.1f} -> {v['us_sales_fy26']:.1f} (+{v['us_sales_fy26']/v['us_sales_fy25']-1:.1%}), adj OI +{v['us_adjoi_change_fy26']:.1f}bn -> incremental margin {inc26:.1%}; average margin {v['us_adjoi_fy26']/v['us_sales_fy26']:.2%}")
+for lab, g in (("my base (8.5% on the plan)", 0.085), ("consensus, Feb diesel, no rollbacks", need / plan - 1),
+               ("consensus, futures diesel, half kept", (need + s_mid * (fy28 - feb26) + roll / 2) / plan - 1)):
+    ug, b_us, us28 = us_growth(g)
+    P(f"   {lab}: total {g:+.1%} -> Walmart U.S. OI {ug:+.1%} ({b_us:.2f} -> {us28:.2f}); incremental margin {(us28-b_us)/(us_sales28-us_sales27):.1%} on +{us_sales28-us_sales27:.1f}bn of sales")
+
+# 17. discounted owner earnings with an explicit cost of equity
+ke = (v["ust_10y"] + v["beta_5y"] * v["erp_implied"]) / 100
+P(f"\n17. COST OF EQUITY: 10-year {v['ust_10y']}% + beta {v['beta_5y']} x implied ERP {v['erp_implied']}% = {ke:.2%}")
+P(f"   owner earnings {owner:.1f}bn = operating cash flow less depreciation (depreciation as a proxy for maintenance capex); ten years at my FY26-FY29 growth {g3:.1%}, then 3%")
+for r_ in (0.07, ke, 0.08, 0.09):
+    lo2, hi2 = -0.05, 0.4
+    for _ in range(80):
+        mid = (lo2 + hi2) / 2; lo2, hi2 = (mid, hi2) if pv(owner, mid, r=r_) < mcap else (lo2, mid)
+    P(f"   at {r_:.2%}: value ${pv(owner, g3, r=r_)/v['shares_out']:.2f} a share; the price needs {lo2:.1%} a year")
+
+# 18. relative valuation, 30 Sep closes on next-fiscal-year consensus
+P("\n18. FORWARD P/E, 30 Sep 2026 close / next fiscal year consensus (Nasdaq)")
+P(f"   WMT {v['price']/v['consensus_fy28']:.1f}x on consensus, {v['price']/S['eps'][2]:.1f}x on mine")
+for t_ in ("cost", "amzn", "bj", "tgt", "dg", "kr"):
+    P(f"   {t_.upper()} {v['px_'+t_]/v['eps_cons_'+t_]:.1f}x")
+P(f"   EV/EBITDA (S&P via StockAnalysis): WMT {v['ev_30sep']/v['ttm_ebitda']:.1f}x; COST {v['ev_ebitda_cost']}x, AMZN {v['ev_ebitda_amzn']}x, BJ {v['ev_ebitda_bj']}x, DG {v['ev_ebitda_dg']}x, TGT {v['ev_ebitda_tgt']}x, KR {v['ev_ebitda_kr']}x")
+
+# 19. consensus line by line and the retail diesel basis
+rev = [n + m for n, m in zip(nsales, mem)]
+P("\n19. CONSENSUS BY LINE (S&P via StockAnalysis revenue; Nasdaq EPS)")
+P(f"   revenue FY27 mine {rev[1]:.1f} vs {v['cons_rev_fy27']:.1f} ({rev[1]/v['cons_rev_fy27']-1:+.1%}); FY28 mine {rev[2]:.1f} vs {v['cons_rev_fy28']:.1f} ({rev[2]/v['cons_rev_fy28']-1:+.1%})")
+m28_ = S["oi"][2] / rev[2]
+sales_cents = (v["cons_rev_fy28"] - rev[2]) * m28_ * (1 - tax) / sh28
+P(f"   EPS FY28 mine {S['eps'][2]:.2f} vs {v['consensus_fy28']:.2f}: gap {v['consensus_fy28']-S['eps'][2]:.2f}, of which sales {sales_cents:.2f} at my {m28_:.2%} margin and margin {v['consensus_fy28']-S['eps'][2]-sales_cents:.2f}")
+P(f"   retail diesel (EIA, FRED GASDESW) Feb 2026 {v['diesel_2026_02']:.2f} -> Sep {v['diesel_2026_09']:.2f} ({v['diesel_2026_09']-v['diesel_2026_02']:+.2f}); NY Harbor {feb26:.2f} -> {v['nyh_2026_09']:.2f} ({v['nyh_2026_09']-feb26:+.2f}); spread {v['diesel_2026_02']-feb26:.2f} -> {v['diesel_2026_09']-v['nyh_2026_09']:.2f}")
