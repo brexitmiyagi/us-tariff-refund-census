@@ -65,15 +65,17 @@
    Q4 FY28 0.826 (cons 0.87 implied)
    FY28 sum 2.913 vs annual 2.913
 
-10. VALUE (multiples: bear 24.7x, base 32.3x, bull 38.1x)
+10. VALUE (multiples: bear 24.7x, base 30.6x = mean of the five guidance-day P/Es [20.4, 24.7, 25.5, 38.1, 44.6], bull 38.1x)
    Bear 25%: FY28 EPS 2.684 -> $66.19; FY29 EPS 2.926 -> $72.14
-   Base 50%: FY28 EPS 2.913 -> $94.02; FY29 EPS 3.250 -> $104.88
+   Base 50%: FY28 EPS 2.913 -> $89.29; FY29 EPS 3.250 -> $99.60
    Bull 25%: FY28 EPS 3.089 -> $117.74; FY29 EPS 3.482 -> $132.72
-   fair value today $92.99 (-10.5%); 12-month target $103.66 (-0.3%, total return +0.7%; 3m bill 4.2%)
-   bear multiple 30.0x: fair value $96.58, target $107.56
-   bear multiple 32.3x: fair value $98.10, target $109.23
-   fuel low: fair value $94.15, target $104.64
-   fuel high: fair value $91.50, target $102.39
+   fair value today $90.62 (-12.8%); 12-month target $101.01 (-2.8%, total return -1.8%; 3m bill 4.2%)
+   bear multiple 30.0x: fair value $94.21, target $104.92
+   bear multiple 30.6x: fair value $94.64, target $105.40
+   base at today's multiple 32.3x: fair value $92.99, target $103.66
+   base at median guidance-day 25.5x: fair value $83.11, target $92.63
+   fuel low: fair value $91.76, target $101.98
+   fuel high: fair value $89.16, target $99.77
 
 11. OWNER EARNINGS 27.8bn (3.4% of $825bn); price needs 7.6% a year; my FY26-FY29 EPS growth 7.2% a year -> $100.54 a share
 
@@ -87,14 +89,14 @@
    FY28E: GM 24.13%, SG&A 20.83% -> OI 33.65 vs top-down 34.21 (-0.56)
    FY29E: GM 24.27%, SG&A 20.80% -> OI 36.80 vs top-down 37.68 (-0.88)
    bottom-up EPS FY28 $2.86, FY29 $3.17 (top-down $2.91, $3.25)
-   same gap applied to all cases: fair value $91.31, 12-month target $100.99
+   same gap applied to all cases: fair value $88.98, 12-month target $98.42
 
 14. 12-MONTH TARGET BY BASE-CASE UNDERLYING GROWTH (bear and bull unchanged)
-   6.0%: FY28 EPS 2.83, FY29 EPS 3.08; fair value $91.72; target $100.91 (-2.9%)
-   7.0%: FY28 EPS 2.87, FY29 EPS 3.15; fair value $92.23; target $102.00 (-1.8%)
-   8.5%: FY28 EPS 2.91, FY29 EPS 3.25; fair value $92.99; target $103.66 (-0.3%)
-   10.0%: FY28 EPS 2.96, FY29 EPS 3.35; fair value $93.76; target $105.33 (+1.4%)
-   11.0%: FY28 EPS 2.99, FY29 EPS 3.42; fair value $94.26; target $106.46 (+2.4%)
+   6.0%: FY28 EPS 2.83, FY29 EPS 3.08; fair value $89.42; target $98.41 (-5.3%)
+   7.0%: FY28 EPS 2.87, FY29 EPS 3.15; fair value $89.90; target $99.44 (-4.3%)
+   8.5%: FY28 EPS 2.91, FY29 EPS 3.25; fair value $90.62; target $101.01 (-2.8%)
+   10.0%: FY28 EPS 2.96, FY29 EPS 3.35; fair value $91.35; target $102.61 (-1.3%)
+   11.0%: FY28 EPS 2.99, FY29 EPS 3.42; fair value $91.83; target $103.68 (-0.2%)
 
 15. HURDLE BY FUEL SENSITIVITY (OI growth on the Feb plan; range across FY27 underlying 7%-10% and leftover split)
    low 0.71bn per $1: on the Feb plan +17.2%; range +14.0% to +17.2%
@@ -107,10 +109,10 @@
    consensus, Feb diesel, no rollbacks: total +12.9% -> Walmart U.S. OI +13.5% (26.96 -> 30.61); incremental margin 18.2% on +20.1bn of sales
    consensus, futures diesel, half kept: total +18.2% -> Walmart U.S. OI +20.1% (26.96 -> 32.39); incremental margin 27.0% on +20.1bn of sales
 
-17. COST OF EQUITY: 10-year 5.29% + beta 0.59 x implied ERP 4.23% = 7.79%
+17. COST OF EQUITY: 10-year 5.29% + beta 0.59 x implied ERP 4.09% = 7.70%
    owner earnings 27.8bn = operating cash flow less depreciation (depreciation as a proxy for maintenance capex); ten years at my FY26-FY29 growth 7.2%, then 3%
    at 7.00%: value $127.17 a share; the price needs 4.7% a year
-   at 7.79%: value $105.30 a share; the price needs 7.0% a year
+   at 7.70%: value $107.25 a share; the price needs 6.8% a year
    at 8.00%: value $100.54 a share; the price needs 7.6% a year
    at 9.00%: value $82.84 a share; the price needs 10.1% a year
 
@@ -128,3 +130,28 @@
    revenue FY27 mine 745.8 vs 752.9 (-0.9%); FY28 mine 776.0 vs 785.9 (-1.3%)
    EPS FY28 mine 2.91 vs 3.22: gap 0.31, of which sales 0.04 at my 4.41% margin and margin 0.27
    retail diesel (EIA, FRED GASDESW) Feb 2026 3.72 -> Sep 6.29 (+2.57); NY Harbor 2.50 -> 4.95 (+2.45); spread 1.22 -> 1.34
+
+20. WALMART U.S. ASK IF INTERNATIONAL (+20.3%) AND SAM'S (+19.0%) KEEP THEIR H1 FY27 OI PACE (refund effects included)
+   my base: Walmart U.S. OI +4.2%; incremental margin 5.6%
+   consensus, Feb diesel, no rollbacks: Walmart U.S. OI +9.6%; incremental margin 12.8%
+   consensus, futures diesel, half kept: Walmart U.S. OI +16.2%; incremental margin 21.7%
+
+21. 12-MONTH TARGET: base-case underlying growth (rows) x parallel shift in the FY28-FY29 diesel strip (columns); bear and bull unchanged
+   growth  -1.00  -0.50  +0.00  +0.50  +1.00
+    6.0%   99.53   99.15   98.41   97.67   96.93
+    7.0%  100.57  100.18   99.44   98.71   97.97
+    8.5%  102.14  101.75  101.01  100.28   99.54
+   10.0%  103.73  103.35  102.61  101.87  101.13
+   11.0%  104.80  104.42  103.68  102.94  102.20
+
+22. SEGMENT BRIDGE ($bn adjusted operating income)
+   Walmart U.S.   FY26A  25.20  FY27 plan  26.96  FY28 underlying  29.17 (+8.2%)
+   International  FY26A   5.90  FY27 plan   6.31  FY28 underlying   6.88 (+9.0%)
+   Sam's Club     FY26A   2.52  FY27 plan   2.70  FY28 underlying   2.86 (+6.0%)
+   Corporate      FY26A  -2.62  FY27 plan  -2.81  FY28 underlying  -2.92
+   Total          FY26A  31.00  FY27 plan  33.17  FY28 underlying  35.99; less fuel 1.17, less half the price investment 0.61 -> 34.21 (model 34.21)
+
+23. CPI CORE GOODS (SA, m/m): May: -0.11%, Jun: -0.09%, Jul: +0.20%, Aug: +0.11%; Aug y/y +0.66%. September prints 14 Oct 2026.
+
+24. KEY DATA: price $103.92 (30 Sep close); 52-week $98.88-$135.16; market cap $824bn; EV $888bn; dividend $0.99 (0.95%)
+   EPS mine / consensus: FY27 2.82/2.87, FY28 2.91/3.22, FY29 3.25/3.53; P/E on mine 35.7x FY28, 32.0x FY29
